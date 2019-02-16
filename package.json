@@ -1,0 +1,32 @@
+{
+  "name": "react-wavify",
+  "version": "0.1.0",
+  "description": "Animated wave component for React",
+  "main": "dist/react-wavify.min.js",
+  "scripts": {
+    "build": "rollup -c -o dist/react-wavify.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woofers/react-wavify.git"
+  },
+  "keywords": [],
+  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woofers/react-wavify/issues"
+  },
+  "homepage": "https://github.com/woofers/react-wavify#readme",
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "react": "^16.8.2",
+    "rollup": "^1.1.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-uglify": "^6.0.2"
+  },
+  "dependencies": {}
+}
