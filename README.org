@@ -9,6 +9,18 @@ A simple React component which creates an animated wave.
 This component is heavily adapted from [[https://github.com/grimor][Mikołaj Stolarski]]'s awesome [[https://codepen.io/grimor/pen/qbXLdN][Codepen]]
 and is functionally similar to [[http://benjamin.grauwin.me/][Benjamin Grauwin]]'s [[https://github.com/peacepostman/wavify][Wavify]] plug-in.
 
+* Installation
+
+*Yarn*
+#+BEGIN_SRC
+yarn add react-wavify
+#+END_SRC
+
+*NPM*
+#+BEGIN_SRC
+npm install react-wavify
+#+END_SRC
+
 * Usage
 
 #+BEGIN_SRC js
