@@ -1,0 +1,51 @@
+
+#+TITLE:    React Wavify
+#+AUTHOR:	Jaxson Van Doorn
+#+EMAIL:	jaxson.vandoorn@gmail.com
+#+OPTIONS:  num:nil toc:nil
+
+A simple React component which creates an animated wave.
+
+This component is heavily adapted from [[https://github.com/grimor][Mikołaj Stolarski]]'s awesome [[https://codepen.io/grimor/pen/qbXLdN][Codepen]]
+and is functionally similar to [[http://benjamin.grauwin.me/][Benjamin Grauwin]]'s [[https://github.com/peacepostman/wavify][Wavify]] plug-in.
+
+* Usage
+
+#+BEGIN_SRC js
+import React, { Component } from "react"
+import Wave from 'react-wavify'
+
+class Application extends Component {
+  render () {
+    return (
+      <div>
+        <Wave fill='#f79902'
+              options={{
+                height: 20,
+                amplitude: 20,
+                speed: 0.15,
+                points: 3
+              }}
+        />
+      </div>
+    )
+  }
+}
+#+END_SRC
+
+Simply add the Wave component to the React application using JSX.
+
+The wave's width will scale to fit the parent container.
+** Props
+*** Fill
+The ~fill~ property can be set to anything that a SVG path can accept (usually gradients or colors).
+*** Options
+The component supports a variety of options to affect how the wave is rendered.
+
+Any omitted options will be set to the default value.
+
+- ~height~ - Height of the wave relative to the SVG element. *Default:* ~20~
+- ~amplitude~ - Amplitude of the rendered wave. *Default:* ~20~
+- ~speed~ - Speed that the wave animation plays at. *Default:* ~0.15~
+- ~points~ - Amount of points used to form the wave.
+             Can not be less than ~1~. *Default:* ~3~
