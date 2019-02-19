@@ -16,7 +16,7 @@ action "Test" {
 
 workflow "Publish" {
   on = "release"
-  resolves = ["GitHub Action for npm"]
+  resolves = ["Deploy"]
 }
 
 action "Filters for GitHub Actions-1" {
@@ -24,9 +24,16 @@ action "Filters for GitHub Actions-1" {
   args = "branch master"
 }
 
-action "GitHub Action for npm" {
+action "Build" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
   needs = ["Filters for GitHub Actions-1"]
+  secrets = ["NPM_AUTH_TOKEN"]
+  args = "run-script build"
+}
+
+action "Deploy" {
+  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
+  needs = ["Build"]
   args = "publish --access public"
   secrets = ["NPM_AUTH_TOKEN"]
 }
