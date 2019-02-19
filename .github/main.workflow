@@ -1,6 +1,6 @@
-workflow "Build, Test and Deploy" {
+workflow "Install and Test" {
   on = "push"
-  resolves = ["Deploy"]
+  resolves = ["Test"]
 }
 
 action "Install" {
@@ -14,21 +14,19 @@ action "Test" {
   args = "test"
 }
 
-action "Filters for GitHub Actions" {
+workflow "Publish" {
+  on = "release"
+  resolves = ["GitHub Action for npm"]
+}
+
+action "Filters for GitHub Actions-1" {
   uses = "actions/bin/filter@46ffca7632504e61db2d4cb16be1e80f333cb859"
   args = "branch master"
-  needs = ["Test"]
 }
 
-action "Build" {
+action "GitHub Action for npm" {
   uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  needs = ["Filters for GitHub Actions"]
-  args = "run-script build"
-}
-
-action "Deploy" {
-  uses = "actions/npm@59b64a598378f31e49cb76f27d6f3312b582f680"
-  secrets = ["NPM_AUTH_TOKEN"]
+  needs = ["Filters for GitHub Actions-1"]
   args = "publish --access public"
-  needs = ["Build"]
+  secrets = ["NPM_AUTH_TOKEN"]
 }
