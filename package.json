@@ -17,7 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/woofers/react-wavify.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "reactjs",
+    "component",
+    "svg",
+    "animation",
+    "wave"
+  ],
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "bugs": {
