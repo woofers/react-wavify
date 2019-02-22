@@ -3,6 +3,12 @@
   "version": "0.3.0",
   "description": "Animated wave component for React",
   "main": "dist/react-wavify.min.js",
+  "files": [
+    "dist",
+    "License.txt",
+    "package.json",
+    "README.org"
+  ],
   "scripts": {
     "build": "rollup -c -o dist/react-wavify.min.js",
     "test": "echo \"No tests \" && exit 0"
