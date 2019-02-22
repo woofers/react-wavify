@@ -7,7 +7,7 @@
     "dist",
     "License.txt",
     "package.json",
-    "README.org"
+    "README.md"
   ],
   "scripts": {
     "build": "rollup -c -o dist/react-wavify.min.js",
