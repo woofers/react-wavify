@@ -1,3 +1,8 @@
+React Wavify
+===========
+
+![img](https://david-dm.org/woofers/react-wavify.svg) ![img](https://badge.fury.io/js/react-wavify.svg) ![img](https://img.shields.io/npm/dt/react-wavify.svg) ![img](https://img.shields.io/npm/l/react-wavify.svg)
+
 A simple React component which creates an animated wave.
 
 This component is heavily adapted from [Mikołaj Stolarski](https://github.com/grimor)'s awesome [Codepen](https://codepen.io/grimor/pen/qbXLdN)
@@ -10,7 +15,7 @@ and is functionally similar to [Benjamin Grauwin](http://benjamin.grauwin.me/)'s
 
     yarn add react-wavify
 
-**NPM**
+**npm**
 
     npm install react-wavify
 

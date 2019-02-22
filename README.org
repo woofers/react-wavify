@@ -4,6 +4,8 @@
 #+EMAIL:	jaxson.vandoorn@gmail.com
 #+OPTIONS:  num:nil toc:nil
 
+https://david-dm.org/woofers/react-wavify.svg https://badge.fury.io/js/react-wavify.svg https://img.shields.io/npm/dt/react-wavify.svg https://img.shields.io/npm/l/react-wavify.svg
+
 A simple React component which creates an animated wave.
 
 This component is heavily adapted from [[https://github.com/grimor][Mikołaj Stolarski]]'s awesome [[https://codepen.io/grimor/pen/qbXLdN][Codepen]]
@@ -16,7 +18,7 @@ and is functionally similar to [[http://benjamin.grauwin.me/][Benjamin Grauwin]]
 yarn add react-wavify
 #+END_SRC
 
-*NPM*
+*npm*
 #+BEGIN_SRC
 npm install react-wavify
 #+END_SRC
