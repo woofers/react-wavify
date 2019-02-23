@@ -1,7 +1,7 @@
 React Wavify
 ===========
 
-![img](https://david-dm.org/woofers/react-wavify.svg) ![img](https://badge.fury.io/js/react-wavify.svg) ![img](https://img.shields.io/npm/dt/react-wavify.svg) ![img](https://img.shields.io/npm/l/react-wavify.svg)
+[![img](https://david-dm.org/woofers/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://badge.fury.io/js/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/dt/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/l/react-wavify.svg)](https://github.com/woofers/react-wavify/blob/master/License.txt) [![img](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg)](https://greenkeeper.io/)
 
 A simple React component which creates an animated wave.
 
