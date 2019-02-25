@@ -8,6 +8,8 @@
 
 A simple React component which creates an animated wave.
 
+*[[https://jaxson.vandoorn.ca/react-wavify/][Live Demo]]*
+
 This component is heavily adapted from [[https://github.com/grimor][Mikołaj Stolarski]]'s awesome [[https://codepen.io/grimor/pen/qbXLdN][Codepen]]
 and is functionally similar to [[http://benjamin.grauwin.me/][Benjamin Grauwin]]'s [[https://github.com/peacepostman/wavify][Wavify]] plug-in.
 
