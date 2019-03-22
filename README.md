@@ -5,6 +5,8 @@ React Wavify
 
 A simple React component which creates an animated wave.
 
+**[Live Demo](https://jaxson.vandoorn.ca/react-wavify/)**
+
 This component is heavily adapted from [Mikołaj Stolarski](https://github.com/grimor)'s awesome [Codepen](https://codepen.io/grimor/pen/qbXLdN)
 and is functionally similar to [Benjamin Grauwin](http://benjamin.grauwin.me/)'s [Wavify](https://github.com/peacepostman/wavify) plug-in.
 
