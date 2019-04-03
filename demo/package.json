@@ -1,7 +1,7 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "emotion-server": "^10.0.7",
