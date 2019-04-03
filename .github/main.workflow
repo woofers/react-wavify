@@ -51,7 +51,7 @@ action "Test Demo" {
   needs = ["Install Demo"]
   args = "--cwd demo test"
 }
-  
+
 action "Build Demo" {
   uses = "nuxt/actions-yarn@master"
   needs = ["Test Demo"]
@@ -62,5 +62,5 @@ action "Publish Demo" {
   uses = "nuxt/actions-yarn@master"
   needs = ["Tag"]
   args = "--cwd demo deploy-ident"
+  secrets = ["GH_TOKEN"]
 }
-  
