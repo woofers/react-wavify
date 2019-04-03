@@ -8,7 +8,7 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-emotion": "^10.0.0",
-    "react-scripts": "2.1.5",
+    "react-scripts": "^2.1.8",
     "react-wavify": "^0.3.1"
   },
   "scripts": {
