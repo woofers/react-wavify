@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "description": "Animated wave component for React",
   "main": "dist/react-wavify.min.js",
   "files": [
