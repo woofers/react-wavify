@@ -11,11 +11,9 @@ const config = {
     input: 'src/wave.js',
     external: ['react'],
     output: {
-    format: 'umd',
-    name: 'react-wavify',
-    globals: {
-      react: "React"
+      format: 'cjs',
+      file: 'dist/react-wavify.min.js',
+      name: 'react-wavify'
     }
-  }
 }
 export default config
