@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { jsx, css } from '@emotion/core'
