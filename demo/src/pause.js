@@ -8,15 +8,18 @@ const Pause = p => {
   const style = css`
     font-size: 75px;
     color: ${p.color};
+    border: 0;
+    background-color: transparent;
   `
   const [button, setButton] = useState(faPause)
   const handleClick = () => {
     setButton(button.iconName === 'pause' ? faPlay : faPause)
+    p.onClick()
   }
   return (
-    <div onClick={handleClick} css={style}>
+    <button onMouseDown={handleClick} css={style}>
       <Icon icon={button} />
-    </div>
+    </button>
   )
 }
 

@@ -2,11 +2,14 @@
 import { jsx, css, Global } from '@emotion/core'
 import Wave from 'react-wavify'
 import Pause from './pause'
+import { useState } from 'react'
 
 const App = () => {
   const sand = '#FADC96'
   const water = '#5E9EF1'
   const splash = '#BF8855'
+  const [isPaused, setPause] = useState(false)
+  const togglePaused = () => setPause(!isPaused)
 
   const global = css`
     @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
@@ -60,7 +63,11 @@ const App = () => {
       <div css={wave}>
         <p css={text}>react-wavify</p>
         <div css={pause}><Pause color={splash} /></div>
-        <Wave fill={water}
+        <div css={pause}>
+          <Pause color={splash} onClick={togglePaused} />
+        </div>
+        <Wave paused={isPaused}
+              fill={water}
               options={{
                 height: 20,
                 amplitude: 20,
