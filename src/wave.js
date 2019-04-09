@@ -12,18 +12,19 @@ class Wave extends Component {
       points: 3,
       ...props.options
     }
-    this.paused = false
     this.lastUpdate = 0
     this.elapsed = 0
+    this.step = 0
     this.update = this.update.bind(this)
+    this.resize = this.resize.bind(this)
   }
 
-  calculateWavePoints (factor) {
+  calculateWavePoints () {
     const points = []
-    for (var i = 0; i <= Math.max(this.options.points, 1); i ++) {
+    for (let i = 0; i <= Math.max(this.options.points, 1); i ++) {
       const scale = 100
       const x = i / this.options.points * this.width()
-      const seed = (factor + (i + i % this.options.points)) * this.options.speed * scale
+      const seed = (this.step + (i + i % this.options.points)) * this.options.speed * scale
       const height = Math.sin(seed / scale) * this.options.amplitude
       const y = Math.sin(seed / scale) * height  + this.options.height
       points.push({x, y})
@@ -55,13 +56,23 @@ class Wave extends Component {
   width = () => this.container.current.offsetWidth
   height = () => this.container.current.offsetHeight
 
-  update () {
+  redraw () {
+    this.setState({
+      path: this.buildPath(this.calculateWavePoints())
+    })
+  }
+
+  draw () {
     const now = new Date()
     this.elapsed += (now - this.lastUpdate)
     this.lastUpdate = now
     const scale = 1000
-    const factor = this.elapsed * Math.PI / scale
-    this.setState({ path: this.buildPath(this.calculateWavePoints(factor)) })
+    this.step = this.elapsed * Math.PI / scale
+    this.redraw()
+  }
+
+  update () {
+    this.draw()
     if (this.frameId) this.resume()
   }
 
@@ -75,19 +86,41 @@ class Wave extends Component {
     this.frameId = 0
   }
 
+  componentDidUpdate (prevProps) {
+    if (this.props.paused !== prevProps.paused) {
+      if (prevProps.paused) {
+        this.resume()
+      }
+      else {
+        this.pause()
+      }
+    }
+  }
+
   componentDidMount () {
-    if (!this.frameId) {
+    if (!this.frameId && !this.props.paused) {
       this.resume()
     }
+    else {
+      this.draw()
+    }
+    window.addEventListener('resize', this.resize)
   }
 
   componentWillUnmount () {
     this.pause()
+    window.removeEventListener('resize', this.resize)
+
+  }
+
+  resize () {
+    if (this.props.paused) this.redraw()
   }
 
   render () {
     return (
-      <div style={{ width: '100%', display: 'inline-block', ...this.props.style }} className={this.props.className} ref={this.container}>
+      <div style={{ width: '100%', display: 'inline-block', ...this.props.style }}
+             className={this.props.className} ref={this.container}>
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path d={this.state.path} fill={this.props.fill}/>
         </svg>
