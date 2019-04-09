@@ -129,4 +129,9 @@ class Wave extends Component {
   }
 }
 
+Wave.defaultProps = {
+  paused: false,
+  fill: '#fff'
+}
+
 export default Wave
