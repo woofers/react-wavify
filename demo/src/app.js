@@ -20,7 +20,6 @@ const App = () => {
 
   const text = css`
     font-family: 'Quicksand', sans-serif;
-    text-align: center;
     font-weight: 700;
     font-size: 5.5em;
     margin-bottom: 0.4em;
@@ -57,12 +56,20 @@ const App = () => {
     justify-content: center;
   `
 
+  const center = css`
+    display: flex;
+    justify-content: center;
+  `
+
   return (
     <div css={full}>
       <Global styles={global} />
       <div css={wave}>
-        <p css={text}>react-wavify</p>
-        <div css={pause}><Pause color={splash} /></div>
+        <div css={center}>
+          <a href="https://github.com/woofers/react-wavify">
+            <p css={text}>react-wavify</p>
+          </a>
+        </div>
         <div css={pause}>
           <Pause color={splash} onClick={togglePaused} />
         </div>
