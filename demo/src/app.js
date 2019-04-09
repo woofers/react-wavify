@@ -7,7 +7,9 @@ import { useState } from 'react'
 const App = () => {
   const sand = '#FADC96'
   const water = '#5E9EF1'
-  const splash = '#BF8855'
+  const brown = alpha => `rgba(191, 136, 85, ${alpha})`
+  const splash = brown(1)
+  const hover = brown(0.9)
   const [isPaused, setPause] = useState(false)
   const togglePaused = () => setPause(!isPaused)
 
@@ -15,6 +17,14 @@ const App = () => {
     @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
     ::selection {
       background: #FFF9CC;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    p:hover, *:hover {
+      color: ${hover};
     }
   `
 
