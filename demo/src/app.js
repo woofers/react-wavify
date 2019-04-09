@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import { jsx, css, Global } from '@emotion/core'
-import { Component } from "react"
-import Wave from "react-wavify"
+import { Component } from 'react'
+import Wave from 'react-wavify'
+import Pause from './pause'
 
 class App extends Component {
   render () {
@@ -21,6 +22,7 @@ class App extends Component {
       text-align: center;
       font-weight: 700;
       font-size: 5.5em;
+      margin-bottom: 0.4em;
       color: ${splash};
       word-wrap: none;
       @media screen and (max-width: 550px) {
@@ -49,11 +51,17 @@ class App extends Component {
       }
     `
 
+    const pause = css`
+      display: flex;
+      justify-content: center;
+    `
+
     return (
       <div css={full}>
         <Global styles={global} />
         <div css={wave}>
           <p css={text}>react-wavify</p>
+          <div css={pause}><Pause color={splash} /></div>
           <Wave fill={water}
                 options={{
                   height: 20,
