@@ -42,6 +42,7 @@ action "Publish" {
 }
 
 action "Install Demo" {
+  needs = "Build"
   uses = "nuxt/actions-yarn@master"
   args = "--cwd demo install"
 }
