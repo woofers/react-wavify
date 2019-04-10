@@ -1,5 +1,6 @@
 import { uglify } from 'rollup-plugin-uglify'
 import babel from 'rollup-plugin-babel'
+const dependencies = Object.keys(require('./package.json').dependencies)
 
 const config = {
     plugins: [
@@ -9,13 +10,11 @@ const config = {
       uglify()
     ],
     input: 'src/wave.js',
-    external: ['react'],
+    external: dependencies,
     output: {
-    format: 'umd',
-    name: 'react-wavify',
-    globals: {
-      react: "React"
+      format: 'cjs',
+      file: 'dist/react-wavify.min.js',
+      name: 'react-wavify'
     }
-  }
 }
 export default config
