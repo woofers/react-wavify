@@ -8522,12 +8522,12 @@ react-scripts@^2.1.8:
   optionalDependencies:
     fsevents "1.2.4"
 
-react-wavify@:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/react-wavify/-/react-wavify-0.3.1.tgz#4b1e11d73e7f19b6c1d52da88f14cfd004002633"
-  integrity sha512-02bkdJU9lVDUzADq9/N2QkhdJvUtUwREsKoDnFAj1qcwlo7uTX7ol+4sajGFXmgrQivW7/+Fr7ZQ7t10lvZWWA==
+react-wavify@../:
+  version "1.0.0"
+  dependencies:
+    react "^16.8.6"
 
-react@^16.8.3:
+react@^16.8.3, react@^16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
   integrity sha512-pC0uMkhLaHm11ZSJULfOBqV4tIZkx87ZLvbbQYunNixAAvjnC+snJCg0XQXn9VIsttVsbZP/H/ewzgsd5fxKXw==
