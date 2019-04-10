@@ -33,6 +33,7 @@ class Application extends Component {
     return (
       <div>
         <Wave fill='#f79902'
+              paused={false}
               options={{
                 height: 20,
                 amplitude: 20,
@@ -56,7 +57,14 @@ The wave's width will scale to fit the parent container.
 
 ### Fill
 
-The `fill` property can be set to anything that a SVG path can accept (usually gradients or colors).
+The `fill` property can be set to anything that a SVG path can accept (usually gradients or colors). **Default:** `#FFF`
+
+
+### Paused
+
+The `paused` property controls the play state of the animation. **Default:** `false`
+
+If set to `true` the wave animation will pause.
 
 
 ### Options
