@@ -1,11 +1,11 @@
 {
-  "main.js": "/react-wavify/static/js/main.ebd80633.chunk.js",
-  "main.js.map": "/react-wavify/static/js/main.ebd80633.chunk.js.map",
+  "main.js": "/react-wavify/static/js/main.d698935b.chunk.js",
+  "main.js.map": "/react-wavify/static/js/main.d698935b.chunk.js.map",
   "runtime~main.js": "/react-wavify/static/js/runtime~main.4ed62da1.js",
   "runtime~main.js.map": "/react-wavify/static/js/runtime~main.4ed62da1.js.map",
-  "static/js/2.1c583827.chunk.js": "/react-wavify/static/js/2.1c583827.chunk.js",
-  "static/js/2.1c583827.chunk.js.map": "/react-wavify/static/js/2.1c583827.chunk.js.map",
+  "static/js/2.772cfc9d.chunk.js": "/react-wavify/static/js/2.772cfc9d.chunk.js",
+  "static/js/2.772cfc9d.chunk.js.map": "/react-wavify/static/js/2.772cfc9d.chunk.js.map",
   "index.html": "/react-wavify/index.html",
-  "precache-manifest.32d7302c347e2e709f168651c7efd70d.js": "/react-wavify/precache-manifest.32d7302c347e2e709f168651c7efd70d.js",
+  "precache-manifest.207b2a467961c82c5392b4a49a00630f.js": "/react-wavify/precache-manifest.207b2a467961c82c5392b4a49a00630f.js",
   "service-worker.js": "/react-wavify/service-worker.js"
 }
