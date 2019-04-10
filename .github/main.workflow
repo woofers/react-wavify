@@ -41,8 +41,20 @@ action "Publish" {
   secrets = ["NPM_AUTH_TOKEN"]
 }
 
-action "Install Demo" {
+action "Link Library" {
   needs = "Build"
+  uses = "nuxt/actions-yarn@master"
+  args = "link"
+}
+
+action "Link Library to Site" {
+  needs = "Link Library"
+  uses = "nuxt/actions-yarn@master"
+  args = "--cwd demo link 'react-wavify'"
+}
+
+action "Install Demo" {
+  needs = "Link Library to Site"
   uses = "nuxt/actions-yarn@master"
   args = "--cwd demo install"
 }
