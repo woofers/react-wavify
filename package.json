@@ -11,7 +11,10 @@
     "README.md"
   ],
   "scripts": {
-    "build": "rollup -c -o dist/react-wavify.min.js",
+    "start": "yarn watch",
+    "clean": "rm -rf dist",
+    "build": "rollup -c",
+    "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0"
   },
   "repository": {
