@@ -10,6 +10,8 @@ A simple React component which creates an animated wave.
 This component is heavily adapted from [Mikołaj Stolarski](https://github.com/grimor)'s awesome [Codepen](https://codepen.io/grimor/pen/qbXLdN)
 and is functionally similar to [Benjamin Grauwin](http://benjamin.grauwin.me/)'s [Wavify](https://github.com/peacepostman/wavify) plug-in.
 
+![img](./screenshots/wave.gif "Wave")
+
 
 # Installation
 
