@@ -1,7 +1,7 @@
 React Wavify
 ===========
 
-[![img](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/react-wavify)](https://github.com/woofers/react-wavify/actions) [![img](https://david-dm.org/woofers/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://badge.fury.io/js/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/dt/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/l/react-wavify.svg)](https://github.com/woofers/react-wavify/blob/master/License.txt) [![img](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg)](https://greenkeeper.io/)
+[![img](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/react-wavify)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-wavify) [![img](https://david-dm.org/woofers/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://badge.fury.io/js/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/dt/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/l/react-wavify.svg)](https://github.com/woofers/react-wavify/blob/master/License.txt) [![img](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg)](https://greenkeeper.io/)
 
 A simple React component which creates an animated wave.
 
@@ -9,6 +9,8 @@ A simple React component which creates an animated wave.
 
 This component is heavily adapted from [Mikołaj Stolarski](https://github.com/grimor)'s awesome [Codepen](https://codepen.io/grimor/pen/qbXLdN)
 and is functionally similar to [Benjamin Grauwin](http://benjamin.grauwin.me/)'s [Wavify](https://github.com/peacepostman/wavify) plug-in.
+
+![img](./screenshots/wave.gif "Wave")
 
 
 # Installation
