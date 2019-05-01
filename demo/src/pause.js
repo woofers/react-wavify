@@ -12,8 +12,10 @@ const Pause = p => {
     background-color: transparent;
   `
   const [button, setButton] = useState(faPause)
+  const isPaused = () => button.iconName === 'pause'
+  const icon = () => isPaused() ? faPlay : faPause
   const handleClick = () => {
-    setButton(button.iconName === 'pause' ? faPlay : faPause)
+    setButton(icon())
     p.onClick()
   }
   return (
