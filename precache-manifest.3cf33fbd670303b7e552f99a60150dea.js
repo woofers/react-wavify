@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "224f82f3d9dba7a66f8c",
-    "url": "/react-wavify/static/js/main.ef9c9d5c.chunk.js"
+    "revision": "50c094cf930242d39ad4",
+    "url": "/react-wavify/static/js/main.35ca6741.chunk.js"
   },
   {
     "revision": "c3428c96d5b038f996a3",
@@ -12,7 +12,7 @@ self.__precacheManifest = [
     "url": "/react-wavify/static/js/2.772cfc9d.chunk.js"
   },
   {
-    "revision": "753fb82a7a8c690243a39b4996fafd45",
+    "revision": "f8082864016fb77ad10a1b5f5e960607",
     "url": "/react-wavify/index.html"
   }
 ];
