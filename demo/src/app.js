@@ -32,7 +32,8 @@ const App = () => {
     font-family: 'Quicksand', sans-serif;
     font-weight: 700;
     font-size: 5.5em;
-    margin-bottom: 0.4em;
+    margin-top: 0;
+    margin-bottom: 0;
     color: ${splash};
     word-wrap: none;
     @media screen and (max-width: 550px) {
@@ -69,8 +70,9 @@ const App = () => {
   const center = css`
     display: flex;
     justify-content: center;
+    margin-top: 5.5em;
+    margin-bottom: 2.5em;
   `
-
   return (
     <div css={full}>
       <Global styles={global} />
