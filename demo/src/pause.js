@@ -12,13 +12,21 @@ const Pause = p => {
     background-color: transparent;
   `
   const [button, setButton] = useState(faPause)
+  const isPaused = () => button.iconName === 'pause'
+  const icon = () => isPaused() ? faPlay : faPause
   const handleClick = () => {
-    setButton(button.iconName === 'pause' ? faPlay : faPause)
+    setButton(icon())
     p.onClick()
   }
+  const handleButton = (e) => {
+    const key = e.eventCode || e.which
+    const enter = 13
+    const space = 32
+    if (key === enter || key === space) handleClick()
+  }
   return (
-    <button onMouseDown={handleClick} css={style}>
-      <Icon icon={button} />
+    <button onKeyPress={handleButton} onMouseDown={handleClick} css={style}>
+      <Icon icon={button} aria-label={icon().iconName} aria-hidden="false" />
     </button>
   )
 }
