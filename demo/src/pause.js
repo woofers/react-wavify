@@ -20,7 +20,7 @@ const Pause = p => {
   }
   return (
     <button onMouseDown={handleClick} css={style}>
-      <Icon icon={button} />
+      <Icon icon={button} aria-label={icon().iconName} aria-hidden="false" />
     </button>
   )
 }
