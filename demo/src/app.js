@@ -36,9 +36,6 @@ const App = () => {
     margin-bottom: 0;
     color: ${splash};
     word-wrap: none;
-    @media screen and (max-width: 550px) {
-      font-size: 3.5em;
-    }
   `
 
   const full = css`
@@ -66,12 +63,27 @@ const App = () => {
     display: flex;
     justify-content: center;
   `
-
+  const margin = `
+    margin-top: 3.5em;
+    margin-bottom: 1.6em;
+  `
   const center = css`
     display: flex;
     justify-content: center;
     margin-top: 5.5em;
     margin-bottom: 2.5em;
+    @media screen and (max-width: 550px) {
+      ${margin}
+      a {
+        font-size: 0.75em;
+      }
+    }
+    @media screen and (max-width: 405px) {
+      ${margin}
+      a {
+        font-size: 0.5em;
+      }
+    }
   `
   return (
     <div css={full}>
