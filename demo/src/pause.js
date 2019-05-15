@@ -5,6 +5,7 @@ import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
 import { jsx, css } from '@emotion/core'
 
 const Pause = p => {
+  const upper = s => s.charAt(0).toUpperCase() + s.slice(1)
   const style = css`
     font-size: 75px;
     color: ${p.color};
@@ -26,7 +27,7 @@ const Pause = p => {
   }
   return (
     <button onKeyPress={handleButton} onMouseDown={handleClick} css={style}>
-      <Icon icon={button} aria-label={icon().iconName} aria-hidden="false" />
+      <Icon icon={button} title={upper(button.iconName)} aria-hidden="false" />
     </button>
   )
 }
