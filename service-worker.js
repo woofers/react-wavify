@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-wavify/precache-manifest.0ac216da17cccb2776d07af5ea6bb47e.js"
+  "/react-wavify/precache-manifest.a4adb0833bbb504dd4af42660b986399.js"
 );
 
 workbox.clientsClaim();
