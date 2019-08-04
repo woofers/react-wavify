@@ -16,7 +16,6 @@ class Wave extends Component {
     this.elapsed = 0
     this.step = 0
     this.update = this.update.bind(this)
-    this.resize = this.resize.bind(this)
   }
 
   calculateWavePoints () {
@@ -63,9 +62,11 @@ class Wave extends Component {
   }
 
   draw () {
-    const now = new Date()
-    this.elapsed += (now - this.lastUpdate)
-    this.lastUpdate = now
+    if (!this.props.paused) {
+      const now = new Date()
+      this.elapsed += (now - this.lastUpdate)
+      this.lastUpdate = now
+    }
     const scale = 1000
     this.step = this.elapsed * Math.PI / scale
     this.redraw()
@@ -73,7 +74,9 @@ class Wave extends Component {
 
   update () {
     this.draw()
-    if (this.frameId) this.resume()
+    if (this.frameId) {
+      this.resume()
+    }
   }
 
   resume () {
@@ -81,40 +84,15 @@ class Wave extends Component {
     this.lastUpdate = new Date()
   }
 
-  pause () {
-    window.cancelAnimationFrame(this.frameId)
-    this.frameId = 0
-  }
-
-  componentDidUpdate (prevProps) {
-    if (this.props.paused !== prevProps.paused) {
-      if (prevProps.paused) {
-        this.resume()
-      }
-      else {
-        this.pause()
-      }
-    }
-  }
-
   componentDidMount () {
-    if (!this.frameId && !this.props.paused) {
+    if (!this.frameId) {
       this.resume()
     }
-    else {
-      this.draw()
-    }
-    window.addEventListener('resize', this.resize)
   }
 
   componentWillUnmount () {
-    this.pause()
-    window.removeEventListener('resize', this.resize)
-
-  }
-
-  resize () {
-    if (this.props.paused) this.redraw()
+    window.cancelAnimationFrame(this.frameId)
+    this.frameId = 0
   }
 
   render () {
