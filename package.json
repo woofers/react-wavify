@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Animated wave component for React",
   "main": "dist/react-wavify.min.js",
   "src": "src/wave.js",
@@ -39,12 +39,12 @@
     "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.4",
-    "@babel/plugin-proposal-class-properties": "^7.5.0",
-    "@babel/preset-env": "^7.5.4",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "react": "^16.8.6",
-    "rollup": "^1.16.7",
+    "rollup": "^1.18.0",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-uglify": "^6.0.2"
   },
