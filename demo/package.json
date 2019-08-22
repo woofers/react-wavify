@@ -19,7 +19,7 @@
     "build": "react-scripts build",
     "test": "echo 'No tests'",
     "eject": "react-scripts eject",
-    "deploy-ident": "git config --global user.email 'woofers1tt@gmail.com' && yarn deploy",
+    "deploy-ident": "git config --global user.email 'woofers1tt@gmail.com' && git config --global user.name 'Jaxson Van Doorn' && yarn deploy",
     "deploy": "gh-pages-with-token -d build"
   },
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",

@@ -1,0 +1,41 @@
+name: build
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v1
+    - name: Use Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.9'
+        registry-url: 'https://registry.npmjs.org'
+    - name: Deploy Info
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
+    - name: Install
+      run: yarn install
+    - name: Build
+      run: yarn build
+    - name: Test
+      run: yarn test
+    - name: Install Demo
+      run: yarn --cwd demo install
+    - name: Build Demo
+      run: yarn --cwd demo build
+    - name: Test Demo
+      run: yarn --cwd demo test
+    - name: Publish
+      if: startsWith(github.ref, 'refs/tags/')
+      run: yarn publish packages/react --access public
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+    - name: Publish Demo
+      if: startsWith(github.ref, 'refs/tags/')
+      run: yarn --cwd demo deploy-ident
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
