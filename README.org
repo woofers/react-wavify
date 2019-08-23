@@ -4,7 +4,9 @@
 #+EMAIL:	jaxson.vandoorn@gmail.com
 #+OPTIONS:  num:nil toc:nil
 
-[[https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/woofers/react-wavify][https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/woofers/react-wavify]] [[https://www.npmjs.com/package/react-wavify][https://david-dm.org/woofers/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://badge.fury.io/js/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/npm/dt/react-wavify.svg]] [[https://github.com/woofers/react-wavify/blob/master/License.txt][https://img.shields.io/npm/l/react-wavify.svg]] [[https://greenkeeper.io/][https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg]]
+* React Wavify
+
+[[https://github.com/woofers/react-wavify/actions][https://github.com/woofers/react-wavify/workflows/build/badge.svg]] [[https://www.npmjs.com/package/react-wavify][https://david-dm.org/woofers/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://badge.fury.io/js/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/npm/dt/react-wavify.svg]] [[https://github.com/woofers/react-wavify/blob/master/License.txt][https://img.shields.io/npm/l/react-wavify.svg]] [[https://greenkeeper.io/][https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg]]
 
 A simple React component which creates an animated wave.
 
