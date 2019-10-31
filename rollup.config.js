@@ -16,9 +16,12 @@ const config = {
   input: json.src,
   external: dependencies,
   output: {
-    format: 'cjs',
+    format: 'umd',
     file: json.main,
-    name: json.name
+    name: json.name,
+    globals: {
+      react: "React"
+    }
   }
 }
 export default config
