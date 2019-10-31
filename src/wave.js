@@ -100,6 +100,7 @@ class Wave extends Component {
       style,
       className,
       fill,
+      paused,
       options,
       children,
       id,
