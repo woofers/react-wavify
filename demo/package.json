@@ -1,17 +1,17 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "1.1.7",
+  "version": "1.2.0",
   "dependencies": {
-    "@emotion/core": "^10.0.15",
-    "@fortawesome/fontawesome-svg-core": "^1.2.21",
-    "@fortawesome/free-solid-svg-icons": "^5.10.1",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "emotion-server": "^10.0.7",
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
+    "@emotion/core": "^10.0.22",
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.7",
+    "emotion-server": "^10.0.17",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
     "react-emotion": "^10.0.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^3.2.0",
     "react-wavify": "../"
   },
   "scripts": {
@@ -34,7 +34,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "gh-pages": "^2.1.0",
+    "gh-pages": "^2.1.1",
     "gh-pages-with-token": "^1.0.0"
   }
 }

@@ -31,7 +31,7 @@ jobs:
       run: yarn --cwd demo test
     - name: Publish
       if: startsWith(github.ref, 'refs/tags/')
-      run: yarn publish packages/react --access public
+      run: yarn publish --access public
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     - name: Publish Demo
