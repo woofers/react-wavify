@@ -100,15 +100,17 @@ class Wave extends Component {
       style,
       className,
       fill,
+      options,
       children,
+      id,
       ...rest
     } = this.props
     return (
       <div style={{ width: '100%', display: 'inline-block', ...style }}
-             className={className} ref={this.container}>
+           className={className} id={id} ref={this.container}>
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
           {children}
-          <path d={this.state.path} fill={fill} />
+          <path d={this.state.path} fill={fill} {...rest} />
         </svg>
       </div>
     )
