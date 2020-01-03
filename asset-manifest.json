@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.js": "/react-wavify/static/js/main.9ac222b3.chunk.js",
-    "main.js.map": "/react-wavify/static/js/main.9ac222b3.chunk.js.map",
-    "runtime-main.js": "/react-wavify/static/js/runtime-main.e426817d.js",
-    "runtime-main.js.map": "/react-wavify/static/js/runtime-main.e426817d.js.map",
-    "static/js/2.6fa3f25a.chunk.js": "/react-wavify/static/js/2.6fa3f25a.chunk.js",
-    "static/js/2.6fa3f25a.chunk.js.map": "/react-wavify/static/js/2.6fa3f25a.chunk.js.map",
+    "main.js": "/react-wavify/static/js/main.1cd70d8a.chunk.js",
+    "main.js.map": "/react-wavify/static/js/main.1cd70d8a.chunk.js.map",
+    "runtime-main.js": "/react-wavify/static/js/runtime-main.bb3d266d.js",
+    "runtime-main.js.map": "/react-wavify/static/js/runtime-main.bb3d266d.js.map",
+    "static/js/2.af705f06.chunk.js": "/react-wavify/static/js/2.af705f06.chunk.js",
+    "static/js/2.af705f06.chunk.js.map": "/react-wavify/static/js/2.af705f06.chunk.js.map",
     "index.html": "/react-wavify/index.html",
-    "precache-manifest.d7fdfa44e22a25807bc50c6107f3487e.js": "/react-wavify/precache-manifest.d7fdfa44e22a25807bc50c6107f3487e.js",
-    "service-worker.js": "/react-wavify/service-worker.js"
+    "precache-manifest.862fc06be4639cae33bd70818cd2b411.js": "/react-wavify/precache-manifest.862fc06be4639cae33bd70818cd2b411.js",
+    "service-worker.js": "/react-wavify/service-worker.js",
+    "static/js/2.af705f06.chunk.js.LICENSE": "/react-wavify/static/js/2.af705f06.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.e426817d.js",
-    "static/js/2.6fa3f25a.chunk.js",
-    "static/js/main.9ac222b3.chunk.js"
+    "static/js/runtime-main.bb3d266d.js",
+    "static/js/2.af705f06.chunk.js",
+    "static/js/main.1cd70d8a.chunk.js"
   ]
 }
