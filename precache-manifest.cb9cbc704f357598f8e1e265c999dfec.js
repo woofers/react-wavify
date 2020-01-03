@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "898043419154c6847a4f89356aec1249",
+    "revision": "a6db0d0cd16bc6a166336fdbb0e4485c",
     "url": "/react-wavify/index.html"
   },
   {
-    "revision": "c8b696acec00a56fd189",
-    "url": "/react-wavify/static/js/2.af705f06.chunk.js"
+    "revision": "a774c367e928b9d69f0b",
+    "url": "/react-wavify/static/js/2.6d1e7098.chunk.js"
   },
   {
-    "revision": "c6a08098602b0cb1c1cd85d1db8e2956",
-    "url": "/react-wavify/static/js/2.af705f06.chunk.js.LICENSE"
+    "revision": "d705cb622423d72c5defbf368ca70dcc",
+    "url": "/react-wavify/static/js/2.6d1e7098.chunk.js.LICENSE"
   },
   {
     "revision": "60be8da8b413069579d7",

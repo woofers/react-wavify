@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-wavify/precache-manifest.862fc06be4639cae33bd70818cd2b411.js"
+  "/react-wavify/precache-manifest.cb9cbc704f357598f8e1e265c999dfec.js"
 );
 
 self.addEventListener('message', (event) => {
