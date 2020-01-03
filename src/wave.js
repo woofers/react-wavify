@@ -86,7 +86,10 @@ class Wave extends Component {
 
   componentDidUpdate(prevProps) {
     const transfer = key => {
-      if (this.options[key] !== this.props.options[key]) {
+      if (typeof this.props.options === 'undefined') {
+        this.options[key] = this.defaults[key]
+      }
+      else if (this.options[key] !== this.props.options[key]) {
         if (typeof this.props.options[key] === 'undefined') {
           this.options[key] = this.defaults[key]
         }
