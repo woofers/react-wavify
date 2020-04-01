@@ -20,7 +20,8 @@ const config = {
     file: json.main,
     name: json.name,
     globals: {
-      react: "React"
+      react: 'React',
+      'prop-types': 'PropTypes'
     }
   }
 }

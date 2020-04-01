@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Wave extends Component {
   constructor (props) {
@@ -141,6 +142,12 @@ class Wave extends Component {
 Wave.defaultProps = {
   paused: false,
   fill: '#fff'
+}
+
+Wave.propTypes = {
+  paused: PropTypes.bool,
+  fill: PropTypes.string,
+  options: PropTypes.object
 }
 
 export default Wave
