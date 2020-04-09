@@ -6,7 +6,7 @@ node_modules
 
 # builds
 build
-dist/react-wavify.min.js
+lib/react-wavify.min.js
 .rpt2_cache
 
 # misc

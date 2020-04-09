@@ -2,18 +2,18 @@
   "name": "react-wavify",
   "version": "1.2.3",
   "description": "Animated wave component for React",
-  "main": "dist/react-wavify.min.js",
+  "main": "lib/react-wavify.min.js",
   "src": "src/wave.js",
-  "types": "dist/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
-    "dist",
+    "lib",
     "License.txt",
     "package.json",
     "README.md"
   ],
   "scripts": {
     "start": "yarn watch",
-    "clean": "rm -rf dist",
+    "clean": "rm lib/react-wavify.min.js",
     "build": "rollup -c",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0"
