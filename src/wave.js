@@ -125,6 +125,8 @@ class Wave extends Component {
       options,
       children,
       id,
+      d,
+      ref,
       ...rest
     } = this.props
     return (
