@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 class Wave extends Component {
   constructor (props) {
     super(props)
     this.container = React.createRef()
     this.state = { path: '' }
-    this.defaults = {
-      height: 20,
-      amplitude: 20,
-      speed: 0.15,
-      points: 3,
-    }
-    this.options = { ...props.options, ...this.defaults }
     this.lastUpdate = 0
     this.elapsed = 0
     this.step = 0
@@ -21,12 +13,12 @@ class Wave extends Component {
 
   calculateWavePoints () {
     const points = []
-    for (let i = 0; i <= Math.max(this.options.points, 1); i ++) {
+    for (let i = 0; i <= Math.max(this.props.points, 1); i ++) {
       const scale = 100
-      const x = i / this.options.points * this.width()
-      const seed = (this.step + (i + i % this.options.points)) * this.options.speed * scale
-      const height = Math.sin(seed / scale) * this.options.amplitude
-      const y = Math.sin(seed / scale) * height  + this.options.height
+      const x = i / this.props.points * this.width()
+      const seed = (this.step + (i + i % this.props.points)) * this.props.speed * scale
+      const height = Math.sin(seed / scale) * this.props.amplitude
+      const y = Math.sin(seed / scale) * height  + this.props.height
       points.push({x, y})
     }
     return points
@@ -85,26 +77,6 @@ class Wave extends Component {
     this.lastUpdate = new Date()
   }
 
-  componentDidUpdate(prevProps) {
-    const transfer = key => {
-      if (typeof this.props.options === 'undefined') {
-        this.options[key] = this.defaults[key]
-      }
-      else if (this.options[key] !== this.props.options[key]) {
-        if (typeof this.props.options[key] === 'undefined') {
-          this.options[key] = this.defaults[key]
-        }
-        else {
-          this.options[key] = this.props.options[key]
-        }
-      }
-    }
-    transfer('height')
-    transfer('amplitude')
-    transfer('speed')
-    transfer('points')
-  }
-
   componentDidMount () {
     if (!this.frameId) {
       this.resume()
@@ -122,7 +94,6 @@ class Wave extends Component {
       className,
       fill,
       paused,
-      options,
       children,
       id,
       d,
@@ -139,17 +110,6 @@ class Wave extends Component {
       </div>
     )
   }
-}
-
-Wave.defaultProps = {
-  paused: false,
-  fill: '#fff'
-}
-
-Wave.propTypes = {
-  paused: PropTypes.bool,
-  fill: PropTypes.string,
-  options: PropTypes.object
 }
 
 export default Wave
