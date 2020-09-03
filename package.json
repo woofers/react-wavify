@@ -3,7 +3,7 @@
   "version": "1.3.1",
   "description": "Animated wave component for React",
   "main": "lib/react-wavify.min.js",
-  "src": "src/wave.js",
+  "src": "src/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
