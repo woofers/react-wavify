@@ -3,7 +3,7 @@
   "version": "1.3.1",
   "description": "Animated wave component for React",
   "main": "lib/react-wavify.min.js",
-  "src": "src/wave.js",
+  "src": "src/index.js",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
@@ -13,9 +13,8 @@
   ],
   "scripts": {
     "start": "yarn watch",
-    "clean": "rm lib/react-wavify.min.js",
-    "build": "rollup -c",
-    "watch": "rollup -c --watch",
+    "clean": "rimraf lib/react-wavify.js lib/react-wavify.dev.js",
+    "build": "webpack",
     "test": "echo \"No tests \" && exit 0"
   },
   "repository": {
@@ -44,10 +43,16 @@
     "@babel/plugin-proposal-class-properties": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.8.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "peer-deps-externals-webpack-plugin": "^1.0.4",
     "react": "^16.13.1",
-    "rollup": "^2.26.9",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.2"
   },
   "dependencies": {
     "prop-types": "^15.7.2"

@@ -20,3 +20,6 @@ lib/react-wavify.min.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+react-wavify.js
+react-wavify.dev.js
