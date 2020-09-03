@@ -1,6 +1,6 @@
 import React from 'react'
 import WaveBase from './wave'
-
+import PropTypes from 'prop-types'
 
 const defaults = {
   height: 20,
@@ -11,5 +11,17 @@ const defaults = {
 
 const Wave = ({ options, ...rest }) =>
   <WaveBase options={{ ...defaults, ...options }} {...rest} />
+
+
+Wave.defaultProps = {
+  paused: false,
+  fill: '#fff'
+}
+
+Wave.propTypes = {
+  paused: PropTypes.bool,
+  fill: PropTypes.string,
+  options: PropTypes.object
+}
 
 export default Wave

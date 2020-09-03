@@ -1,12 +1,10 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 class Wave extends Component {
   constructor (props) {
     super(props)
     this.container = React.createRef()
     this.state = { path: '' }
-    this.options = { ...props.options }
     this.lastUpdate = 0
     this.elapsed = 0
     this.step = 0
@@ -15,12 +13,12 @@ class Wave extends Component {
 
   calculateWavePoints () {
     const points = []
-    for (let i = 0; i <= Math.max(this.options.points, 1); i ++) {
+    for (let i = 0; i <= Math.max(this.props.options.points, 1); i ++) {
       const scale = 100
-      const x = i / this.options.points * this.width()
-      const seed = (this.step + (i + i % this.options.points)) * this.options.speed * scale
-      const height = Math.sin(seed / scale) * this.options.amplitude
-      const y = Math.sin(seed / scale) * height  + this.options.height
+      const x = i / this.props.options.points * this.width()
+      const seed = (this.step + (i + i % this.props.options.points)) * this.props.options.speed * scale
+      const height = Math.sin(seed / scale) * this.props.options.amplitude
+      const y = Math.sin(seed / scale) * height  + this.props.options.height
       points.push({x, y})
     }
     return points
@@ -113,17 +111,6 @@ class Wave extends Component {
       </div>
     )
   }
-}
-
-Wave.defaultProps = {
-  paused: false,
-  fill: '#fff'
-}
-
-Wave.propTypes = {
-  paused: PropTypes.bool,
-  fill: PropTypes.string,
-  options: PropTypes.object
 }
 
 export default Wave
