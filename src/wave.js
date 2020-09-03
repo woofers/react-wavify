@@ -13,12 +13,12 @@ class Wave extends Component {
 
   calculateWavePoints () {
     const points = []
-    for (let i = 0; i <= Math.max(this.props.options.points, 1); i ++) {
+    for (let i = 0; i <= Math.max(this.props.points, 1); i ++) {
       const scale = 100
-      const x = i / this.props.options.points * this.width()
-      const seed = (this.step + (i + i % this.props.options.points)) * this.props.options.speed * scale
-      const height = Math.sin(seed / scale) * this.props.options.amplitude
-      const y = Math.sin(seed / scale) * height  + this.props.options.height
+      const x = i / this.props.points * this.width()
+      const seed = (this.step + (i + i % this.props.points)) * this.props.speed * scale
+      const height = Math.sin(seed / scale) * this.props.amplitude
+      const y = Math.sin(seed / scale) * height  + this.props.height
       points.push({x, y})
     }
     return points
@@ -94,7 +94,6 @@ class Wave extends Component {
       className,
       fill,
       paused,
-      options,
       children,
       id,
       d,

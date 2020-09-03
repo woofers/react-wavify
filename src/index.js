@@ -10,7 +10,7 @@ const defaults = {
 }
 
 const Wave = ({ options, ...rest }) =>
-  <WaveBase options={{ ...defaults, ...options }} {...rest} />
+  <WaveBase {...defaults} {...options} {...rest} />
 
 
 Wave.defaultProps = {
