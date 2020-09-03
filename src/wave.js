@@ -6,13 +6,7 @@ class Wave extends Component {
     super(props)
     this.container = React.createRef()
     this.state = { path: '' }
-    this.defaults = {
-      height: 20,
-      amplitude: 20,
-      speed: 0.15,
-      points: 3,
-    }
-    this.options = { ...props.options, ...this.defaults }
+    this.options = { ...props.options }
     this.lastUpdate = 0
     this.elapsed = 0
     this.step = 0
@@ -83,26 +77,6 @@ class Wave extends Component {
   resume () {
     this.frameId = window.requestAnimationFrame(this.update)
     this.lastUpdate = new Date()
-  }
-
-  componentDidUpdate(prevProps) {
-    const transfer = key => {
-      if (typeof this.props.options === 'undefined') {
-        this.options[key] = this.defaults[key]
-      }
-      else if (this.options[key] !== this.props.options[key]) {
-        if (typeof this.props.options[key] === 'undefined') {
-          this.options[key] = this.defaults[key]
-        }
-        else {
-          this.options[key] = this.props.options[key]
-        }
-      }
-    }
-    transfer('height')
-    transfer('amplitude')
-    transfer('speed')
-    transfer('points')
   }
 
   componentDidMount () {
