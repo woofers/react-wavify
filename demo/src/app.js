@@ -1,5 +1,6 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, css, Global } from '@emotion/core'
+import { jsx, css, Global } from '@emotion/react'
 import Wave from 'react-wavify'
 import Pause from './pause'
 import { useState } from 'react'
