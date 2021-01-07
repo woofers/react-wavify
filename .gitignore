@@ -6,7 +6,6 @@ node_modules
 
 # builds
 build
-lib/react-wavify.min.js
 .rpt2_cache
 
 # misc
@@ -22,3 +21,5 @@ yarn-debug.log*
 yarn-error.log*
 
 demo/.eslintcache
+lib/react-wavify.dev.js
+lib/react-wavify.js
