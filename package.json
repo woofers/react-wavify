@@ -2,7 +2,7 @@
   "name": "react-wavify",
   "version": "1.4.0",
   "description": "Animated wave component for React",
-  "main": "lib/react-wavify.min.js",
+  "main": "lib/index.js",
   "src": "src/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -13,8 +13,8 @@
   ],
   "scripts": {
     "start": "yarn watch",
-    "clean": "rm lib/react-wavify.min.js",
-    "build": "rollup -c",
+    "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js",
+    "build": "NODE_ENV=production && rollup -c",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0"
   },
@@ -37,15 +37,17 @@
   },
   "homepage": "https://github.com/woofers/react-wavify#readme",
   "peerDependencies": {
-    "react": "^0.13.0 || ^0.14.0 || ^15.0.0 || ^16.0.0"
+    "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-replace": "^2.3.4",
+    "rimraf": "^3.0.2",
     "rollup": "^2.36.1",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-uglify": "^6.0.4"
   },
   "dependencies": {
