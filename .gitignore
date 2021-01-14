@@ -23,3 +23,7 @@ yarn-error.log*
 demo/.eslintcache
 lib/react-wavify.dev.js
 lib/react-wavify.js
+lib/react-wavify.module.dev.js
+lib/react-wavify.module.js
+lib/index.module.js
+/lib/index.d.ts
