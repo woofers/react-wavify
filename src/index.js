@@ -1,7 +1,6 @@
 import React from 'react'
 import WaveBase from './wave'
-
-const PropTypes = __isDev__ ? require('prop-types') : {}
+import PropTypes from './props'
 
 const defaults = {
   height: 20,
