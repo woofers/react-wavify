@@ -2,7 +2,7 @@
 
 # React Wavify
 
-[![img](https://github.com/woofers/react-wavify/workflows/build/badge.svg)](https://github.com/woofers/react-wavify/actions) [![img](https://david-dm.org/woofers/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://badge.fury.io/js/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/dt/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/l/react-wavify.svg)](https://github.com/woofers/react-wavify/blob/master/License.txt)
+[![img](https://github.com/woofers/react-wavify/workflows/build/badge.svg)](https://github.com/woofers/react-wavify/actions) [![img](https://img.shields.io/david/woofers/react-wavify)](https://www.npmjs.com/package/react-wavify) [![img](https://badge.fury.io/js/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://img.shields.io/npm/dt/react-wavify.svg)](https://www.npmjs.com/package/react-wavify) [![img](https://badgen.net/bundlephobia/minzip/react-wavify)](https://bundlephobia.com/result?p=react-wavify) [![img](https://img.shields.io/npm/l/react-wavify.svg)](https://github.com/woofers/react-wavify/blob/master/LICENSE)
 
 A simple React component which creates an animated wave.
 
