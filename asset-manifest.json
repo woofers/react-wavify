@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/react-wavify/static/js/main.5b314590.chunk.js",
-    "main.js.map": "/react-wavify/static/js/main.5b314590.chunk.js.map",
+    "main.js": "/react-wavify/static/js/main.9493a4f2.chunk.js",
+    "main.js.map": "/react-wavify/static/js/main.9493a4f2.chunk.js.map",
     "runtime-main.js": "/react-wavify/static/js/runtime-main.fe3436e0.js",
     "runtime-main.js.map": "/react-wavify/static/js/runtime-main.fe3436e0.js.map",
-    "static/js/2.eb75984e.chunk.js": "/react-wavify/static/js/2.eb75984e.chunk.js",
-    "static/js/2.eb75984e.chunk.js.map": "/react-wavify/static/js/2.eb75984e.chunk.js.map",
+    "static/js/2.56cf135e.chunk.js": "/react-wavify/static/js/2.56cf135e.chunk.js",
+    "static/js/2.56cf135e.chunk.js.map": "/react-wavify/static/js/2.56cf135e.chunk.js.map",
     "index.html": "/react-wavify/index.html",
-    "static/js/2.eb75984e.chunk.js.LICENSE.txt": "/react-wavify/static/js/2.eb75984e.chunk.js.LICENSE.txt"
+    "static/js/2.56cf135e.chunk.js.LICENSE.txt": "/react-wavify/static/js/2.56cf135e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.fe3436e0.js",
-    "static/js/2.eb75984e.chunk.js",
-    "static/js/main.5b314590.chunk.js"
+    "static/js/2.56cf135e.chunk.js",
+    "static/js/main.9493a4f2.chunk.js"
   ]
 }
