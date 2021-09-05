@@ -6,11 +6,11 @@
 
 * React Wavify
 
-[[https://github.com/woofers/react-wavify/actions][https://github.com/woofers/react-wavify/workflows/build/badge.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/david/woofers/react-wavify]] [[https://www.npmjs.com/package/react-wavify][https://badge.fury.io/js/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/npm/dt/react-wavify.svg]] https://badgen.net/bundlephobia/minzip/react-wavify [[https://github.com/woofers/react-wavify/blob/master/LICENSE][https://img.shields.io/npm/l/react-wavify.svg]]
+[[https://github.com/woofers/react-wavify/actions][https://github.com/woofers/react-wavify/workflows/build/badge.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/david/woofers/react-wavify]] [[https://www.npmjs.com/package/react-wavify][https://badge.fury.io/js/react-wavify.svg]] [[https://www.npmjs.com/package/react-wavify][https://img.shields.io/npm/dt/react-wavify.svg]] https://badgen.net/bundlephobia/minzip/react-wavify [[https://github.com/woofers/react-wavify/blob/main/LICENSE][https://img.shields.io/npm/l/react-wavify.svg]]
 
 A simple React component which creates an animated wave.
 
-*[[https://jaxson.vandoorn.ca/react-wavify/][Live Demo]]*
+*[[https://jaxs.onl/react-wavify/][Live Demo]]*
 
 This component is heavily adapted from [[https://github.com/grimor][Mikołaj Stolarski]]'s awesome [[https://codepen.io/grimor/pen/qbXLdN][Codepen]]
 and is functionally similar to [[http://benjamin.grauwin.me/][Benjamin Grauwin]]'s [[https://github.com/peacepostman/wavify][Wavify]] plug-in.
