@@ -35,7 +35,8 @@ jobs:
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     - name: Publish Demo
+      uses: JamesIves/github-pages-deploy-action@4.1.5
       if: startsWith(github.ref, 'refs/tags/')
-      run: yarn --cwd demo deploy-ident
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      with:
+        branch: master
+        folder: demo/public
