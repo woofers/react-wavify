@@ -1,9 +1,0 @@
-{
-  "minify": {
-    "mangle": {
-      "properties": {
-        "regex": "^_[^_]"
-      }
-    }
-  }
-}
