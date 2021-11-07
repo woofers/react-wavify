@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "description": "Animated wave component for React",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
@@ -47,11 +47,11 @@
     "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.5",
-    "@babel/plugin-proposal-class-properties": "^7.14.5",
-    "@babel/preset-env": "^7.15.4",
-    "@babel/preset-react": "^7.14.5",
-    "microbundle": "^0.13.3",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "microbundle": "^0.14.1",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
