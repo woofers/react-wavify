@@ -11,7 +11,7 @@ jobs:
     - name: Use Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '14.15.4'
+        node-version: '14'
         registry-url: 'https://registry.npmjs.org'
     - name: Deploy Info
       env:
@@ -30,13 +30,9 @@ jobs:
     - name: Test Demo
       run: yarn --cwd demo test
     - name: Publish
-      if: startsWith(github.ref, 'refs/tags/')
-      run: yarn publish --access public
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-    - name: Publish Demo
       uses: JamesIves/github-pages-deploy-action@4.1.5
       if: startsWith(github.ref, 'refs/tags/')
       with:
         branch: gh-pages
         folder: demo/public
+        commit-message: Updates

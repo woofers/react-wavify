@@ -1,14 +1,15 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "1.5.4",
+  "version": "1.5.5",
   "dependencies": {
-    "@emotion/react": "^11.4.1",
+    "@emotion/react": "^11.5.0",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-script": "^2.0.5",
     "react-scripts": "^4.0.3",
     "react-wavify": "../"
   },
@@ -16,9 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "echo 'No tests'",
-    "eject": "react-scripts eject",
-    "deploy-ident": "git config --global user.email 'woofers1tt@gmail.com' && git config --global user.name 'Jaxson Van Doorn' && yarn deploy",
-    "deploy": "gh-pages-with-token -d build"
+    "eject": "react-scripts eject"
   },
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
