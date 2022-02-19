@@ -1,10 +1,10 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { getCssText } from "stitches";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { getCssText } from 'stitches'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const initialProps = await Document.getInitialProps(ctx)
+    return { ...initialProps }
   }
   render() {
     return (
@@ -13,7 +13,7 @@ class MyDocument extends Document {
           <script
             type="text/javascript"
             dangerouslySetInnerHTML={{
-              __html: `document.documentElement.className = 'js'`,
+              __html: `document.documentElement.className = 'js'`
             }}
           ></script>
           <style
@@ -26,8 +26,8 @@ class MyDocument extends Document {
           <NextScript />
         </body>
       </Html>
-    );
+    )
   }
 }
 
-export default MyDocument;
+export default MyDocument

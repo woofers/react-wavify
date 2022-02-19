@@ -1,10 +1,10 @@
-import React from "react";
-import Head from "next/head";
+import React from 'react'
+import Head from 'next/head'
 
 const GoogleFonts = ({ children, fonts }) => {
   const href = `https://fonts.googleapis.com/css2?family=${fonts.join(
-    "&family="
-  )}&display=swap`;
+    '&family='
+  )}&display=swap`
   return (
     <Head>
       <link
@@ -15,7 +15,7 @@ const GoogleFonts = ({ children, fonts }) => {
       <link href={href} rel="stylesheet" />
       {children}
     </Head>
-  );
-};
+  )
+}
 
-export default GoogleFonts;
+export default GoogleFonts
