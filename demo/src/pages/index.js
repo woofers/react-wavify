@@ -1,8 +1,6 @@
-/** @jsxRuntime classic */
-/** @jsx jsx */
-import { jsx, css, Global } from '@emotion/react'
 import Wave from 'react-wavify'
-import Pause from './pause'
+import { css, Global } from '@emotion/react'
+import Pause from 'components/pause'
 import { useState } from 'react'
 
 const App = () => {
