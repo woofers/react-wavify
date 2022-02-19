@@ -45,14 +45,12 @@ const Full = styled('div', {
 const WaveDiv = styled('div', {
   background: sand,
   width: '100%',
-  height: '400px',
   position: 'absolute',
-  zDndex: -1
-/*
-  @media screen and (max-width: 550px) {
-    height: 300px;
+  zIndex: -1,
+  height: '300px',
+  '@sm': {
+    height: '400px'
   }
-*/
 })
 
 const PauseWrapper = styled('div', {
@@ -60,30 +58,31 @@ const PauseWrapper = styled('div', {
   justifyContent: 'center'
 })
 
-const margin = `
-  margin-top: 3.5em;
-  margin-bottom: 1.6em;
-`
+const margin = {
+  marginTop: '3.5em',
+  marginBottom: '1.6em'
+}
 
 const Center = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  marginTop: '5.5em',
-  marginBottom: '2.5em'
-/*
-  @media screen and (max-width: 550px) {
-    ${margin}
-    a {
-      font-size: 0.75em;
+  marginTop: '3.5em',
+  marginBottom: '1.6em',
+  a: {
+    fontSize: '0.5em',
+  },
+  '@xsm': {
+    a: {
+      fontSize: '0.75em'
     }
-  }
-  @media screen and (max-width: 405px) {
-    ${margin}
-    a {
-      font-size: 0.5em;
+  },
+  '@sm': {
+    marginTop: '5.5em',
+    marginBottom: '2.5em',
+    a: {
+      fontSize: '16px'
     }
-  }
-*/
+  },
 })
 
 const App = () => {
