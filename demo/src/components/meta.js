@@ -1,5 +1,5 @@
-import React from 'react'
-import Head from 'next/head'
+import React from "react";
+import Head from "next/head";
 
 const Meta = () => {
   return (
@@ -16,7 +16,7 @@ const Meta = () => {
       <meta name="theme-color" content="#fadc96" />
       <meta name="msapplication-navbutton-color" content="#fadc96" />
     </Head>
-  )
-}
+  );
+};
 
-export default Meta
+export default Meta;
