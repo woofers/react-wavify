@@ -12,6 +12,20 @@ module.exports = {
   },
   webpack(config, { isServer }) {
     config.plugins.push(new ESLintPlugin())
+    config.module.rules.push({
+      test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig: {
+                plugins: ['preset-default', { name: 'removeViewBox', enabled: false }]
+              }
+            }
+          },
+          'file-loader'
+        ],
+    })
     return config
   },
   basePath: '/react-wavify',

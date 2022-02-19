@@ -9,7 +9,7 @@ const ThemeClass = ({ children, theme, name }) => {
   const isDefault = name === 'light'
   const className = !isDefault ? theme : undefined
   useEffect(() => {
-    if (window === 'undefined' || !className) return
+    if (typeof window === 'undefined' || !className) return
     document.body.classList.add(className)
     return () => document.body.classList.remove(className)
   }, [className])
