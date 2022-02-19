@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { faPause, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome'
-import { jsx, css } from '@emotion/react'
+import { styled, globalCss } from 'stitches'
 
-const Pause = p => {
+const Button = styled('button', {
+  fontSize: '75px',
+  border: '0',
+  backgroundColor: 'transparent'
+})
+
+const Pause = ({ color, ...p }) => {
   const upper = s => s.charAt(0).toUpperCase() + s.slice(1)
-  const style = css`
-    font-size: 75px;
-    color: ${p.color};
-    border: 0;
-    background-color: transparent;
-  `
   const [button, setButton] = useState(faPause)
   const isPaused = () => button.iconName === 'pause'
   const icon = () => isPaused() ? faPlay : faPause
@@ -25,9 +25,9 @@ const Pause = p => {
     if (key === enter || key === space) handleClick()
   }
   return (
-    <button onKeyPress={handleButton} onMouseDown={handleClick} css={style}>
+    <Button css={{ color }} onKeyPress={handleButton} onMouseDown={handleClick}>
       <Icon icon={button} title={upper(button.iconName)} aria-hidden="false" />
-    </button>
+    </Button>
   )
 }
 

@@ -1,6 +1,9 @@
+import { ThemeProvider } from 'components/theme-provider'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
+const MyApp = ({ Component, pageProps }) => (
+  <ThemeProvider>
+    <Component {...pageProps} />
+  </ThemeProvider>
+)
 
 export default MyApp
