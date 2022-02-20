@@ -5,6 +5,7 @@ const Meta = () => {
   return (
     <Head>
       <title>react-wavify</title>
+      <meta name="description" content="Animated wave component for React" />
       <meta charSet="utf-8" />
       <meta
         name="viewport"
