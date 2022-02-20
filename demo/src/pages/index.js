@@ -1,16 +1,7 @@
 import { useState } from 'react'
-import { styled, globalCss } from 'stitches'
+import { styled } from 'stitches'
 import Wave from 'react-wavify'
 import Pause from 'components/pause'
-
-const useGlobal = globalCss({
-  '@import': [
-    `url('https://fonts.googleapis.com/css?family=Quicksand:400,700')`
-  ],
-  '::selection': {
-    background: '$selection'
-  }
-})
 
 const Text = styled('span', {
   fontFamily: '$title',
@@ -80,7 +71,6 @@ const Link = styled('a', {
 const App = () => {
   const [isPaused, setPause] = useState()
   const togglePaused = () => setPause(!isPaused)
-  useGlobal()
   return (
     <Fullscreen>
       <WaveWrapper>
