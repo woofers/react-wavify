@@ -21,8 +21,7 @@ const Text = styled('span', {
   fontSize: '5.5em',
   marginTop: 0,
   marginBottom: 0,
-  color: '$primary',
-  breakWord: 'none'
+  color: '$primary'
 })
 
 const Full = styled('div', {
@@ -63,7 +62,7 @@ const Center = styled('div', {
   marginBottom: '1.6em',
   '@sm': {
     marginTop: '5.5em',
-    marginBottom: '2.5em',
+    marginBottom: '2.5em'
   }
 })
 
