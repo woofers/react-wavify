@@ -1,7 +1,7 @@
-import Wave from 'react-wavify'
-import Pause from 'components/pause'
 import { useState } from 'react'
 import { styled, globalCss } from 'stitches'
+import Wave from 'react-wavify'
+import Pause from 'components/pause'
 
 const useGlobal = globalCss({
   '@import': [
@@ -9,9 +9,6 @@ const useGlobal = globalCss({
   ],
   '::selection': {
     background: '$selection'
-  },
-  a: {
-    textDecoration: 'none'
   },
   'p:hover, *:hover': {
     color: '$primaryHover'
@@ -25,7 +22,7 @@ const Text = styled('span', {
   marginTop: 0,
   marginBottom: 0,
   color: '$primary',
-  wordWrap: 'none'
+  breakWord: 'none'
 })
 
 const Full = styled('div', {
@@ -64,24 +61,21 @@ const Center = styled('div', {
   justifyContent: 'center',
   marginTop: '3.5em',
   marginBottom: '1.6em',
-  a: {
-    fontSize: '0.5em'
-  },
-  '@xsm': {
-    a: {
-      fontSize: '0.75em'
-    }
-  },
   '@sm': {
     marginTop: '5.5em',
     marginBottom: '2.5em',
-    a: {
-      fontSize: '16px'
-    }
   }
 })
 
 const Link = styled('a', {
+  textDecoration: 'none',
+  fontSize: '0.5em',
+  '@xsm': {
+    fontSize: '0.75em'
+  },
+  '@sm': {
+    fontSize: '16px'
+  }
 })
 
 const App = () => {
@@ -93,12 +87,11 @@ const App = () => {
       <WaveWrapper>
         <Center>
           <Link href="https://github.com/woofers/react-wavify">
-            <Text>re
-act-wavify</Text>
+            <Text>react-wavify</Text>
           </Link>
         </Center>
         <PauseWrapper>
-          <Pause onClick={togglePaused} />
+          <Pause onClick={togglePaused} paused={isPaused} />
         </PauseWrapper>
         <Wave
           paused={isPaused}

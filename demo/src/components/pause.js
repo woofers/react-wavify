@@ -1,6 +1,5 @@
-import { useState } from 'react'
+import { styled } from 'stitches'
 import { PlayIcon, PauseIcon } from 'icons'
-import { styled, globalCss } from 'stitches'
 
 const Button = styled('button', {
   fontSize: '75px',
@@ -12,11 +11,9 @@ const Button = styled('button', {
   }
 })
 
-const Pause = ({ color, ...p }) => {
-  const [paused, setPaused] = useState()
+const Pause = ({ color, paused, onClick, ...rest }) => {
   const handleClick = () => {
-    setPaused(value => !value)
-    p.onClick()
+    onClick()
   }
   const handleButton = e => {
     const key = e.eventCode || e.which
@@ -32,6 +29,7 @@ const Pause = ({ color, ...p }) => {
       onMouseDown={handleClick}
       title={label}
       aria-label={label}
+      {...rest}
     >
       {paused ? <PlayIcon /> : <PauseIcon />}
     </Button>
