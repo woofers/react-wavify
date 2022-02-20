@@ -10,6 +10,9 @@ const splash = brown(1)
 const hover = brown(0.9)
 
 const useGlobal = globalCss({
+  '@import': [
+    `url('https://fonts.googleapis.com/css?family=Quicksand:400,700')`
+  ],
   '::selection': {
     background: '#FFF9CC'
   },
