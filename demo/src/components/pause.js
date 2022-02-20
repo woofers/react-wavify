@@ -5,6 +5,7 @@ import { styled, globalCss } from 'stitches'
 const Button = styled('button', {
   fontSize: '75px',
   border: '0',
+  color: '$primary',
   backgroundColor: 'transparent',
   '> svg': {
     width: '0.875em'
