@@ -11,11 +11,8 @@ const Button = styled('button', {
   }
 })
 
-const upper = s => s.charAt(0).toUpperCase() + s.slice(1)
-
 const Pause = ({ color, ...p }) => {
   const [paused, setPaused] = useState()
-  const isPaused = () => paused
   const handleClick = () => {
     setPaused(value => !value)
     p.onClick()
@@ -26,9 +23,16 @@ const Pause = ({ color, ...p }) => {
     const space = 32
     if (key === enter || key === space) handleClick()
   }
+  const label = paused ? 'Play' : 'Pause'
   return (
-    <Button css={{ color }} onKeyPress={handleButton} onMouseDown={handleClick}>
-      {isPaused() ? <PlayIcon /> : <PauseIcon />}
+    <Button
+      css={{ color }}
+      onKeyPress={handleButton}
+      onMouseDown={handleClick}
+      title={label}
+      aria-label={label}
+    >
+      {paused ? <PlayIcon /> : <PauseIcon />}
     </Button>
   )
 }
