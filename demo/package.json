@@ -1,7 +1,7 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,7 @@
     "next": "12.1.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-wavify": "^1.5.4"
+    "react-wavify": "../."
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
