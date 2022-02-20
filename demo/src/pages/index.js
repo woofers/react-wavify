@@ -3,24 +3,23 @@ import Pause from 'components/pause'
 import { useState } from 'react'
 import { styled, globalCss } from 'stitches'
 
-const sand = '#FADC96'
-const water = '#5E9EF1'
-const brown = alpha => `rgba(191, 136, 85, ${alpha})`
-const splash = brown(1)
-const hover = brown(0.9)
+const primary = '#bf8855'
+const primaryHover = '#bf8855e6'
+const secondary = '#fadc96'
+const blue = '#5e9ef1'
 
 const useGlobal = globalCss({
   '@import': [
-    `url('https://fonts.googleapis.com/css?family=Quicksand:400,700')`
+    `url('https://fonts.googleapis.com/css?family=Quicksecondary:400,700')`
   ],
   '::selection': {
-    background: '#FFF9CC'
+    background: '#fff9cc'
   },
   a: {
     textDecoration: 'none'
   },
-  'p:hover, *:hover': {
-    color: hover
+  'p:primaryHover, *:primaryHover': {
+    color: primaryHover
   }
 })
 
@@ -30,12 +29,12 @@ const Text = styled('p', {
   fontSize: '5.5em',
   marginTop: 0,
   marginBottom: 0,
-  color: splash,
+  color: primary,
   wordWrap: 'none'
 })
 
 const Full = styled('div', {
-  background: water,
+  background: blue,
   position: 'fixed',
   top: 0,
   bottom: 0,
@@ -45,7 +44,7 @@ const Full = styled('div', {
 })
 
 const WaveDiv = styled('div', {
-  background: sand,
+  background: secondary,
   width: '100%',
   position: 'absolute',
   zIndex: -1,
@@ -100,11 +99,11 @@ const App = () => {
           </a>
         </Center>
         <PauseWrapper>
-          <Pause color={splash} onClick={togglePaused} />
+          <Pause color={primary} onClick={togglePaused} />
         </PauseWrapper>
         <Wave
           paused={isPaused}
-          fill={water}
+          fill={blue}
           options={{
             height: 20,
             amplitude: 20,
