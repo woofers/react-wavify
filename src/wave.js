@@ -98,6 +98,10 @@ class Wave extends Component {
       id,
       d,
       ref,
+      height,
+      amplitude,
+      speed,
+      points,
       ...rest
     } = this.props
     return (
