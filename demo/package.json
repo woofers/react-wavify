@@ -13,18 +13,18 @@
     "format": "prettier --write \"{tests,src}/**/*.{js,mjs}\""
   },
   "dependencies": {
-    "@stitches/react": "^1.2.6",
-    "next": "12.1.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "@stitches/react": "^1.2.7",
+    "next": "^12.1.4",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-wavify": "../."
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
-    "eslint": "8.9.0",
-    "eslint-config-next": "12.1.0",
+    "eslint": "^8.13.0",
+    "eslint-config-next": "^12.1.4",
     "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^6.2.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.6.2"
   }
 }
