@@ -7,7 +7,7 @@ const Wrapper = styled('div', {
   $$gap: '84px',
   $$height: '324px',
   '@xsm': {
-    $$gap: '58px',
+    $$gap: '90px',
     $$height: '356px'
   },
   '@sm': {
@@ -18,6 +18,7 @@ const Wrapper = styled('div', {
 
 const BodyWrapper = styled('div', {
   position: 'absolute',
+  zIndex: 3,
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -65,16 +66,24 @@ const Text = styled('span', {
   }
 })
 
-const Center = styled('div', {
-  zIndex: '-1',
+const Background = styled('div', {
+  zIndex: 0,
   position: 'fixed',
   top: 0,
   width: '100%',
-  background: '$secondary',
+  height: 'calc($$height)',
+  background: '$secondary'
+})
+
+const Center = styled('div', {
+  zIndex: 4,
+  position: 'fixed',
+  top: 0,
+  width: '100%',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
-  height: 'calc($$height)'
+  mixBlendMode: 'color-burn'
 })
 
 const Link = styled('a', {
@@ -90,6 +99,7 @@ const App = () => {
   const togglePaused = () => setPause(!isPaused)
   return (
     <Wrapper>
+      <Background />
       <Center>
         <HeaderWrapper>
           <Text>
@@ -113,6 +123,48 @@ const App = () => {
           }}
         />
         <BodyContainer>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
           <BodyText>A simple React component which creates an animated wave.</BodyText>
         </BodyContainer>
       </BodyWrapper>
