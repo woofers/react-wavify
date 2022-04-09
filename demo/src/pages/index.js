@@ -3,40 +3,57 @@ import { styled } from 'stitches'
 import Wave from 'react-wavify'
 import Pause from 'components/pause'
 
-const BodyWrapper = styled('div', {
-  position: 'relative'
+const Wrapper = styled('div', {
+  $$gap: '84px',
+  $$height: '324px',
+  '@xsm': {
+    $$gap: '58px',
+    $$height: '356px'
+  },
+  '@sm': {
+    $$height: '412px',
+    $$gap: '58px'
+  }
 })
 
-const BodyContainer = styled('div', {
-  top: '-80px',
+const BodyWrapper = styled('div', {
   position: 'absolute',
   width: '100%',
   display: 'flex',
+  flexDirection: 'column',
+  top: 'calc($$height - $$gap)'
+})
+
+const BodyContainer = styled('div', {
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  fontSize: '20px'
+  background: '$blue'
 })
 
 const BodyText = styled('div', {
   color: '$darkBlue',
-  fontFamily: '$title'
+  fontFamily: '$title',
+  fontSize: '20px'
 })
 
 const HeaderWrapper = styled('div', {
   pt: '56px',
   pb: '25.6px',
   '@sm': {
-    pt: '80px',
-    pb: '28px'
+    pt: '76px',
+    pb: '30px'
   }
 })
 
 const Text = styled('span', {
   fontFamily: '$title',
+  whiteSpace: 'nowrap',
   fontWeight: 700,
   fontSize: '44px',
-  marginTop: 0,
-  marginBottom: 0,
+  my: 0,
   letterSpacing: '-1.5px',
   '@xsm': {
     fontSize: '66px',
@@ -48,17 +65,16 @@ const Text = styled('span', {
   }
 })
 
-const WaveWrapper = styled('div', {
-  background: '$secondary',
-  width: '100%'
-})
-
 const Center = styled('div', {
+  zIndex: '-1',
+  position: 'fixed',
+  top: 0,
+  width: '100%',
+  background: '$secondary',
   display: 'flex',
-  justifyContent: 'center',
   flexDirection: 'column',
   alignItems: 'center',
-  pb: '8px'
+  height: 'calc($$height)'
 })
 
 const Link = styled('a', {
@@ -73,30 +89,34 @@ const App = () => {
   const [isPaused, setPause] = useState()
   const togglePaused = () => setPause(!isPaused)
   return (
-    <WaveWrapper>
+    <Wrapper>
       <Center>
         <HeaderWrapper>
-          <Link href="https://github.com/woofers/react-wavify">
-            <Text>react-wavify</Text>
-          </Link>
+          <Text>
+            <Link href="https://github.com/woofers/react-wavify">
+              react-wavify
+            </Link>
+          </Text>
         </HeaderWrapper>
         <Pause onClick={togglePaused} paused={isPaused} />
       </Center>
-      <Wave
-        style={{ display: 'block' }}
-        paused={isPaused}
-        fill="var(--colors-blue)"
-        options={{
-          height: 20,
-          amplitude: 20,
-          speed: 0.2,
-          points: 4
-        }}
-      />
       <BodyWrapper>
-        <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
+        <Wave
+          style={{ display: 'block' }}
+          paused={isPaused}
+          fill="var(--colors-blue)"
+          options={{
+            height: 20,
+            amplitude: 20,
+            speed: 0.2,
+            points: 4
+          }}
+        />
+        <BodyContainer>
+          <BodyText>A simple React component which creates an animated wave.</BodyText>
+        </BodyContainer>
       </BodyWrapper>
-    </WaveWrapper>
+    </Wrapper>
   )
 }
 
