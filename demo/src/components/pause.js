@@ -5,6 +5,7 @@ const Button = styled('button', {
   fontSize: '75px',
   border: '0',
   color: '$primary',
+  transition: 'color 0.15s ease-out',
   backgroundColor: 'transparent',
   '&:hover': {
     color: '$primaryHover'

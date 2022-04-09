@@ -41,7 +41,7 @@ const TextContainer = styled('div', {
 const BodyText = styled('div', {
   color: '$darkBlue',
   fontFamily: '$body',
-  fontSize: '20px'
+  fontSize: '20px',
 })
 
 const HeaderWrapper = styled('div', {
@@ -93,6 +93,7 @@ const Center = styled('header', {
 const LinkHeader = styled('a', {
   textDecoration: 'none',
   color: '$primary',
+  transition: 'color 0.15s ease-out',
   '&:hover': {
     color: '$primaryHover'
   }
@@ -100,12 +101,16 @@ const LinkHeader = styled('a', {
 
 const PlainLink = styled('a', {
   textDecoration: 'none',
-  color: '$current'
+  color: '$current',
+  '&:hover': {
+    color: '$current'
+  }
 })
 
 const Link = styled('a', {
   textDecoration: 'none',
   color: '#1e2a5b',
+  transition: 'color 0.15s ease-out',
   '&:hover': {
     color: '$current'
   }
@@ -115,7 +120,7 @@ const Footer = styled('footer', {
   zIndex: 5,
   opacity: 0.5,
   position: 'absolute',
-  bottom: '20px',
+  bottom:  'calc(12px + env(safe-area-inset-left, 0px))',
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
@@ -140,7 +145,6 @@ const App = () => {
       </Center>
       <BodyWrapper>
         <Wave
-          style={{ display: 'block' }}
           paused={isPaused}
           fill="var(--colors-blue)"
           options={{
