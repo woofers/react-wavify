@@ -29,7 +29,7 @@ const Pause = ({ color, paused, onClick, ...rest }) => {
     <Button
       css={{ color }}
       onKeyPress={handleButton}
-      onMouseDown={handleClick}
+      onMouseUp={handleClick}
       title={label}
       aria-label={label}
       {...rest}

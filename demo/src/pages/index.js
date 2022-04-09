@@ -3,12 +3,32 @@ import { styled } from 'stitches'
 import Wave from 'react-wavify'
 import Pause from 'components/pause'
 
+const BodyWrapper = styled('div', {
+  position: 'relative'
+})
+
+const BodyContainer = styled('div', {
+  top: '-80px',
+  position: 'absolute',
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontSize: '20px'
+})
+
+const BodyText = styled('div', {
+  color: '$darkBlue',
+  fontFamily: '$title'
+})
+
 const Text = styled('span', {
   fontFamily: '$title',
   fontWeight: 700,
   fontSize: '5.5em',
   marginTop: 0,
-  marginBottom: 0
+  marginBottom: 0,
+  letterSpacing: '-3px'
 })
 
 const Fullscreen = styled('div', {
@@ -92,6 +112,9 @@ const App = () => {
             points: 4
           }}
         />
+        <BodyWrapper>
+          <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
+        </BodyWrapper>
       </WaveWrapper>
     </Fullscreen>
   )

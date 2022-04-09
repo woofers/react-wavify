@@ -19,6 +19,7 @@ export const {
       primaryHover: '#bf8855e6',
       secondary: '#fadc96',
       blue: '#5e9ef1',
+      darkBlue: '#3268ce',
       selection: '#fff9cc'
     },
     fonts: {
