@@ -33,13 +33,7 @@ const Text = styled('span', {
 
 const WaveWrapper = styled('div', {
   background: '$secondary',
-  width: '100%',
-  position: 'absolute',
-  zIndex: -1,
-  height: '300px',
-  '@sm': {
-    height: '400px'
-  }
+  width: '100%'
 })
 
 const PauseWrapper = styled('div', {
@@ -47,19 +41,14 @@ const PauseWrapper = styled('div', {
   justifyContent: 'center'
 })
 
-const margin = {
-  marginTop: '3.5em',
-  marginBottom: '1.6em'
-}
-
 const Center = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  marginTop: '3.5em',
-  marginBottom: '1.6em',
+  pt: '3.5em',
+  pb: '1.6em',
   '@sm': {
-    marginTop: '5.5em',
-    marginBottom: '2.5em'
+    pt: '5.5em',
+    pb: '2.5em'
   }
 })
 
@@ -82,31 +71,30 @@ const App = () => {
   const [isPaused, setPause] = useState()
   const togglePaused = () => setPause(!isPaused)
   return (
-    <div>
-      <WaveWrapper>
-        <Center>
-          <Link href="https://github.com/woofers/react-wavify">
-            <Text>react-wavify</Text>
-          </Link>
-        </Center>
-        <PauseWrapper>
-          <Pause onClick={togglePaused} paused={isPaused} />
-        </PauseWrapper>
-        <Wave
-          paused={isPaused}
-          fill="var(--colors-blue)"
-          options={{
-            height: 20,
-            amplitude: 20,
-            speed: 0.2,
-            points: 4
-          }}
-        />
-        <BodyWrapper>
-          <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
-        </BodyWrapper>
-      </WaveWrapper>
-    </div>
+    <WaveWrapper>
+      <Center>
+        <Link href="https://github.com/woofers/react-wavify">
+          <Text>react-wavify</Text>
+        </Link>
+      </Center>
+      <PauseWrapper>
+        <Pause onClick={togglePaused} paused={isPaused} />
+      </PauseWrapper>
+      <Wave
+        style={{ display: 'block' }}
+        paused={isPaused}
+        fill="var(--colors-blue)"
+        options={{
+          height: 20,
+          amplitude: 20,
+          speed: 0.2,
+          points: 4
+        }}
+      />
+      <BodyWrapper>
+        <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
+      </BodyWrapper>
+    </WaveWrapper>
   )
 }
 
