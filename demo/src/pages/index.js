@@ -22,7 +22,8 @@ const BodyWrapper = styled('div', {
   width: '100%',
   display: 'flex',
   flexDirection: 'column',
-  top: 'calc($$height - $$gap)'
+  top: 'calc($$height - $$gap)',
+  minHeight: 'calc(100vh - $$height)'
 })
 
 const BodyContainer = styled('div', {
@@ -35,7 +36,21 @@ const BodyContainer = styled('div', {
 })
 
 const TextContainer = styled('div', {
-  maxWidth: '600px'
+  maxWidth: '600px',
+  margin: '0 20px'
+})
+
+const MiniNav = styled('nav', {
+  display: 'flex',
+  gap: '0 8px',
+  pb: '12px'
+})
+
+const BodyBold = styled('div', {
+  color: '$darkBlue',
+  fontFamily: '$body',
+  fontSize: '20px',
+  fontWeight: 600
 })
 
 const BodyText = styled('div', {
@@ -156,6 +171,11 @@ const App = () => {
         />
         <BodyContainer>
           <TextContainer>
+            <MiniNav>
+              <BodyBold>NPM 134k+ Downloads</BodyBold>
+              <BodyBold aria-hidden>|</BodyBold>
+              <BodyBold>GitHub 200+ Stars</BodyBold>
+            </MiniNav>
             <BodyText>A simple React component which creates an animated wave.</BodyText>
             <BodyText>This component is heavily adapted from <Link href="https://github.com/grimor">Mikołaj Stolarski</Link>{"'"}s awesome <Link href="https://codepen.io/grimor/pen/qbXLdN">Codepen</Link>
           {' '}and is functionally similar to <Link href="https://github.com/peacepostman">Benjamin Grauwin</Link>{"'"}s <Link href="https://github.com/peacepostman/wavify">Wavify</Link> plug-in.</BodyText>
