@@ -22,6 +22,15 @@ const BodyText = styled('div', {
   fontFamily: '$title'
 })
 
+const HeaderWrapper = styled('div', {
+  pt: '56px',
+  pb: '25.6px',
+  '@sm': {
+    pt: '80px',
+    pb: '28px'
+  }
+})
+
 const Text = styled('span', {
   fontFamily: '$title',
   fontWeight: 700,
@@ -44,20 +53,12 @@ const WaveWrapper = styled('div', {
   width: '100%'
 })
 
-const PauseWrapper = styled('div', {
-  display: 'flex',
-  justifyContent: 'center'
-})
-
 const Center = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  pt: '56px',
-  pb: '25.6px',
-  '@sm': {
-    pt: '88px',
-    pb: '40px'
-  }
+  flexDirection: 'column',
+  alignItems: 'center',
+  pb: '8px'
 })
 
 const Link = styled('a', {
@@ -74,13 +75,13 @@ const App = () => {
   return (
     <WaveWrapper>
       <Center>
-        <Link href="https://github.com/woofers/react-wavify">
-          <Text>react-wavify</Text>
-        </Link>
-      </Center>
-      <PauseWrapper>
+        <HeaderWrapper>
+          <Link href="https://github.com/woofers/react-wavify">
+            <Text>react-wavify</Text>
+          </Link>
+        </HeaderWrapper>
         <Pause onClick={togglePaused} paused={isPaused} />
-      </PauseWrapper>
+      </Center>
       <Wave
         style={{ display: 'block' }}
         paused={isPaused}
