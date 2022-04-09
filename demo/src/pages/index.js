@@ -34,9 +34,13 @@ const BodyContainer = styled('div', {
   background: '$blue'
 })
 
+const TextContainer = styled('div', {
+  maxWidth: '600px'
+})
+
 const BodyText = styled('div', {
   color: '$darkBlue',
-  fontFamily: '$title',
+  fontFamily: '$body',
   fontSize: '20px'
 })
 
@@ -75,7 +79,7 @@ const Background = styled('div', {
   background: '$secondary'
 })
 
-const Center = styled('div', {
+const Center = styled('header', {
   zIndex: 3,
   position: 'fixed',
   top: 0,
@@ -86,12 +90,36 @@ const Center = styled('div', {
   alignItems: 'center'
 })
 
-const Link = styled('a', {
+const LinkHeader = styled('a', {
   textDecoration: 'none',
   color: '$primary',
   '&:hover': {
     color: '$primaryHover'
   }
+})
+
+const PlainLink = styled('a', {
+  textDecoration: 'none',
+  color: '$current'
+})
+
+const Link = styled('a', {
+  textDecoration: 'none',
+  color: '#1e2a5b',
+  '&:hover': {
+    color: '$current'
+  }
+})
+
+const Footer = styled('footer', {
+  zIndex: 5,
+  opacity: 0.5,
+  position: 'absolute',
+  bottom: '20px',
+  width: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
 })
 
 const App = () => {
@@ -103,9 +131,9 @@ const App = () => {
       <Center>
         <HeaderWrapper>
           <Text>
-            <Link href="https://github.com/woofers/react-wavify">
+            <LinkHeader href="https://github.com/woofers/react-wavify">
               react-wavify
-            </Link>
+            </LinkHeader>
           </Text>
         </HeaderWrapper>
         <Pause onClick={togglePaused} paused={isPaused} />
@@ -123,8 +151,16 @@ const App = () => {
           }}
         />
         <BodyContainer>
+          <TextContainer>
+            <BodyText>A simple React component which creates an animated wave.</BodyText>
+            <BodyText>This component is heavily adapted from <Link href="https://github.com/grimor">Mikołaj Stolarski</Link>{"'"}s awesome <Link href="https://codepen.io/grimor/pen/qbXLdN">Codepen</Link>
+          {' '}and is functionally similar to <Link href="https://github.com/peacepostman">Benjamin Grauwin</Link>{"'"}s <Link href="https://github.com/peacepostman/wavify">Wavify</Link> plug-in.</BodyText>
+          </TextContainer>
         </BodyContainer>
       </BodyWrapper>
+      <Footer>
+        <BodyText>made by <PlainLink href="https://jaxs.onl">jaxson</PlainLink></BodyText>
+      </Footer>
     </Wrapper>
   )
 }

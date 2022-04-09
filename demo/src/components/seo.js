@@ -15,44 +15,44 @@ const SEO = ({ description, lang, meta, title, noIndex }) => {
   const data = [
     {
       name: `description`,
-      content: metaDescription,
+      content: metaDescription
     },
     {
       property: `og:title`,
-      content: tab,
+      content: tab
     },
     {
       property: `og:description`,
-      content: metaDescription,
+      content: metaDescription
     },
     {
       property: `og:type`,
-      content: `website`,
+      content: `website`
     },
     {
       property: `og:image`,
-      content: ogImage,
+      content: ogImage
     },
     {
       name: 'twitter:image',
-      content: ogImage,
+      content: ogImage
     },
     {
       name: `twitter:card`,
-      content: `summary`,
+      content: `summary`
     },
     {
       name: `twitter:creator`,
-      content: name,
+      content: name
     },
     {
       name: `twitter:title`,
-      content: tab,
+      content: tab
     },
     {
       name: `twitter:description`,
-      content: metaDescription,
-    },
+      content: metaDescription
+    }
   ].concat(meta)
   return (
     <Head>
@@ -72,10 +72,26 @@ const SEO = ({ description, lang, meta, title, noIndex }) => {
         href="/react-wavify/manifest.webmanifest"
         crossOrigin="anonymous"
       />
-      <link rel="apple-touch-icon" sizes="32x32" href="/react-wavify/icons/mask-32x32.png" />
-      <link rel="apple-touch-icon" sizes="48x48" href="/react-wavify/icons/mask-48x48.png" />
-      <link rel="apple-touch-icon" sizes="72x72" href="/react-wavify/icons/mask-72x72.png" />
-      <link rel="apple-touch-icon" sizes="96x96" href="/react-wavify/icons/mask-96x96.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="32x32"
+        href="/react-wavify/icons/mask-32x32.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="48x48"
+        href="/react-wavify/icons/mask-48x48.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="72x72"
+        href="/react-wavify/icons/mask-72x72.png"
+      />
+      <link
+        rel="apple-touch-icon"
+        sizes="96x96"
+        href="/react-wavify/icons/mask-96x96.png"
+      />
       <link
         rel="apple-touch-icon"
         sizes="144x144"
@@ -110,7 +126,7 @@ SEO.defaultProps = {
   meta: [],
   description: '',
   title: '',
-  noIndex: false,
+  noIndex: false
 }
 
 export default SEO

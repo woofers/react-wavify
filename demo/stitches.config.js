@@ -23,7 +23,8 @@ export const {
       selection: '#fff9cc'
     },
     fonts: {
-      title: `'Quicksand', sans-serif`
+      title: `'Quicksand', sans-serif`,
+      body: `'Trap', sans-serif`
     },
     space: {
 

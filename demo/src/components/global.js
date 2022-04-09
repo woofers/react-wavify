@@ -9,9 +9,9 @@ const useGlobalStyles = globalCss({
   'html, body': {
     height: '100%'
   },
-  'body': {
+  body: {
     lineHeight: 1.5,
-   '-webkit-font-smoothing': 'antialiased',
+    '-webkit-font-smoothing': 'antialiased',
     background: '$blue'
   },
   'img, picture, video, canvas, svg': {
