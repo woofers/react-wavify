@@ -10,7 +10,7 @@ const Button = styled('button', {
     color: '$primaryHover'
   },
   '> svg': {
-    width: '0.875em'
+    width: '65.625px'
   }
 })
 

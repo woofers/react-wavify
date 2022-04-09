@@ -25,10 +25,18 @@ const BodyText = styled('div', {
 const Text = styled('span', {
   fontFamily: '$title',
   fontWeight: 700,
-  fontSize: '5.5em',
+  fontSize: '44px',
   marginTop: 0,
   marginBottom: 0,
-  letterSpacing: '-3px'
+  letterSpacing: '-1.5px',
+  '@xsm': {
+    fontSize: '66px',
+    letterSpacing: '-2.25px'
+  },
+  '@sm': {
+    fontSize: '88px',
+    letterSpacing: '-3px'
+  }
 })
 
 const WaveWrapper = styled('div', {
@@ -44,26 +52,19 @@ const PauseWrapper = styled('div', {
 const Center = styled('div', {
   display: 'flex',
   justifyContent: 'center',
-  pt: '3.5em',
-  pb: '1.6em',
+  pt: '56px',
+  pb: '25.6px',
   '@sm': {
-    pt: '5.5em',
-    pb: '2.5em'
+    pt: '88px',
+    pb: '40px'
   }
 })
 
 const Link = styled('a', {
   textDecoration: 'none',
-  fontSize: '0.5em',
   color: '$primary',
   '&:hover': {
     color: '$primaryHover'
-  },
-  '@xsm': {
-    fontSize: '0.75em'
-  },
-  '@sm': {
-    fontSize: '16px'
   }
 })
 
