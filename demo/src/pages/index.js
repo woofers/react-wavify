@@ -31,16 +31,6 @@ const Text = styled('span', {
   letterSpacing: '-3px'
 })
 
-const Fullscreen = styled('div', {
-  background: '$blue',
-  position: 'fixed',
-  top: 0,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  opacity: 1
-})
-
 const WaveWrapper = styled('div', {
   background: '$secondary',
   width: '100%',
@@ -92,7 +82,7 @@ const App = () => {
   const [isPaused, setPause] = useState()
   const togglePaused = () => setPause(!isPaused)
   return (
-    <Fullscreen>
+    <div>
       <WaveWrapper>
         <Center>
           <Link href="https://github.com/woofers/react-wavify">
@@ -116,7 +106,7 @@ const App = () => {
           <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
         </BodyWrapper>
       </WaveWrapper>
-    </Fullscreen>
+    </div>
   )
 }
 
