@@ -76,14 +76,14 @@ const Background = styled('div', {
 })
 
 const Center = styled('div', {
-  zIndex: 4,
+  zIndex: 3,
   position: 'fixed',
   top: 0,
   width: '100%',
+  height: 'calc($$height)',
   display: 'flex',
   flexDirection: 'column',
-  alignItems: 'center',
-  mixBlendMode: 'color-burn'
+  alignItems: 'center'
 })
 
 const Link = styled('a', {
@@ -123,49 +123,6 @@ const App = () => {
           }}
         />
         <BodyContainer>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
-          <BodyText>A simple React component which creates an animated wave.</BodyText>
         </BodyContainer>
       </BodyWrapper>
     </Wrapper>
