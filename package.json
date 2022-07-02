@@ -47,7 +47,7 @@
     "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2",
+    "microbundle": "^0.15.0",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
