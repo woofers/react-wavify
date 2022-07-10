@@ -10,7 +10,7 @@ const defaults = {
 }
 
 const Wave = ({ options, ...rest }) =>
-  <WaveBase {...defaults} {...options} {...rest} />
+  <WaveBase {...Object.assign({}, defaults, options, rest)} />
 
 Wave.defaultProps = {
   paused: false,

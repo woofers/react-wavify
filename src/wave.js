@@ -109,7 +109,7 @@ class Wave extends Component {
            className={className} id={id} ref={this._container}>
         <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
           {children}
-          <path d={this.state.path} fill={fill} {...rest} />
+          <path {...Object.assign({}, { d: this.state.path, fill }, rest)} />
         </svg>
       </div>
     )
