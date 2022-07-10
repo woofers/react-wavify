@@ -113,7 +113,7 @@ const App = () => {
           }}
         />
         <BodyWrapper>
-          <BodyContainer><BodyText>A simple React component which creates an animated wave.</BodyText></BodyContainer>
+          <BodyContainer></BodyContainer>
         </BodyWrapper>
       </WaveWrapper>
     </Fullscreen>
