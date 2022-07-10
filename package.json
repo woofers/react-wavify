@@ -37,6 +37,10 @@
     "animation",
     "wave"
   ],
+  "browserslist": [
+    "defaults",
+    "not IE 11"
+  ],
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "bugs": {
