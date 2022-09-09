@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "Animated wave component for React",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
@@ -51,7 +51,7 @@
     "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
-    "microbundle": "^0.15.0",
+    "microbundle": "^0.15.1",
     "rimraf": "^3.0.2"
   },
   "dependencies": {
