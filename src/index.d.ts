@@ -13,6 +13,8 @@ interface WaveProps extends Props<WaveProps>, SVGProps<SVGPathElement> {
   fill?: string
   options?: WaveOptions
   ref?: string
+  svgId?: string
+  svgPathId?: string
 }
 
 interface WaveState {
