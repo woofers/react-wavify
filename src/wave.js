@@ -96,6 +96,8 @@ class Wave extends Component {
       paused,
       children,
       id,
+      svgId,
+      svgPathId,
       d,
       ref,
       height,
@@ -107,9 +109,9 @@ class Wave extends Component {
     return (
       <div style={{ width: '100%', display: 'inline-block', ...style }}
            className={className} id={id} ref={this._container}>
-        <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" id={svgId}>
           {children}
-          <path {...Object.assign({}, { d: this.state.path, fill }, rest)} />
+          <path {...Object.assign({}, { d: this.state.path, fill }, rest)} id={svgPathId}/>
         </svg>
       </div>
     )
