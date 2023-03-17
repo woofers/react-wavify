@@ -3,6 +3,8 @@ import WaveBase from './wave'
 import PropTypes from './props'
 
 const defaults = {
+  fill: '#fff',
+  paused: false,
   height: 20,
   amplitude: 20,
   speed: 0.15,
@@ -11,11 +13,6 @@ const defaults = {
 
 const Wave = ({ options, ...rest }) =>
   <WaveBase {...Object.assign({}, defaults, options, rest)} />
-
-Wave.defaultProps = {
-  paused: false,
-  fill: '#fff'
-}
 
 if (__isDev__) {
   Wave.displayName = 'Wave'
