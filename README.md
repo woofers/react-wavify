@@ -18,12 +18,15 @@ and is functionally similar to [Benjamin Grauwin](http://benjamin.grauwin.me/)'s
 
 **Yarn**
 
-    yarn add react-wavify
+```yarn
+yarn add react-wavify
+```
 
 **npm**
 
-    npm install react-wavify
-
+```npm
+npm install react-wavify
+```
 
 # Usage
 
