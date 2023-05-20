@@ -1,7 +1,8 @@
-import { useState } from 'react'
+'use client'
+
+import React from 'react'
 import { styled } from 'stitches'
-import Wave from 'react-wavify'
-import Pause from 'components/pause'
+import Wave from 'components/wave'
 
 const BodyWrapper = styled('div', {
   position: 'relative'
@@ -52,11 +53,6 @@ const WaveWrapper = styled('div', {
   }
 })
 
-const PauseWrapper = styled('div', {
-  display: 'flex',
-  justifyContent: 'center'
-})
-
 const margin = {
   marginTop: '3.5em',
   marginBottom: '1.6em'
@@ -88,36 +84,20 @@ const Link = styled('a', {
   }
 })
 
-const App = () => {
-  const [isPaused, setPause] = useState()
-  const togglePaused = () => setPause(!isPaused)
-  return (
-    <Fullscreen>
-      <WaveWrapper>
-        <Center>
-          <Link href="https://github.com/woofers/react-wavify">
-            <Text>react-wavify</Text>
-          </Link>
-        </Center>
-        <PauseWrapper>
-          <Pause onClick={togglePaused} paused={isPaused} />
-        </PauseWrapper>
-        <Wave
-          paused={isPaused}
-          fill="var(--colors-blue)"
-          options={{
-            height: 20,
-            amplitude: 20,
-            speed: 0.2,
-            points: 4
-          }}
-        />
-        <BodyWrapper>
-          <BodyContainer></BodyContainer>
-        </BodyWrapper>
-      </WaveWrapper>
-    </Fullscreen>
-  )
-}
+const App: React.FC<Nothing> = () => (
+  <Fullscreen>
+    <WaveWrapper>
+      <Center>
+        <Link href="https://github.com/woofers/react-wavify">
+          <Text>react-wavify</Text>
+        </Link>
+      </Center>
+      <Wave />
+      <BodyWrapper>
+        <BodyContainer></BodyContainer>
+      </BodyWrapper>
+    </WaveWrapper>
+  </Fullscreen>
+)
 
 export default App

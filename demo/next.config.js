@@ -1,8 +1,6 @@
-const ESLintPlugin = require('eslint-webpack-plugin')
 const path = require('path')
 
 module.exports = {
-  distDir: 'build',
   swcMinify: true,
   reactStrictMode: true,
   images: {
@@ -10,13 +8,13 @@ module.exports = {
     path: 'https://example.com/myaccount/',
   },
   webpack(config, { isServer }) {
-    config.plugins.push(new ESLintPlugin())
     config.module.rules.push({
       test: /\.svg$/,
         use: [
           {
             loader: '@svgr/webpack',
             options: {
+            typescript: true,
               svgoConfig: {
                 plugins: ['preset-default', { name: 'removeViewBox', enabled: false }]
               }
@@ -30,5 +28,8 @@ module.exports = {
   output: "export",
   basePath: '/react-wavify',
   assetPrefix: '/react-wavify/',
-  trailingSlash: true
+  trailingSlash: true,
+  experimental: {
+    appDir: true,
+  }
 }

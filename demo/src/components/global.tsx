@@ -9,7 +9,7 @@ const useGlobalStyles = globalCss({
   }
 })
 
-const Global = ({ children }) => {
+const Global: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   useGlobalStyles()
   return <>{children}</>
 }

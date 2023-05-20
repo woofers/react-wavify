@@ -1,3 +1,5 @@
+'use client'
+
 import { styled } from 'stitches'
 import { PlayIcon, PauseIcon } from 'icons'
 
@@ -14,7 +16,13 @@ const Button = styled('button', {
   }
 })
 
-const Pause = ({ color, paused, onClick, ...rest }) => {
+type PauseProps = {
+  color?: string
+  paused?: boolean
+  onClick: () => void
+}
+
+const Pause: React.FC<PauseProps> = ({ color, paused, onClick, ...rest }) => {
   const handleClick = () => {
     onClick()
   }

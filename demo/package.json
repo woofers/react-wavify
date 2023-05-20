@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "echo 'No tests'",
-    "format": "prettier --write \"{tests,src}/**/*.{js,mjs}\""
+    "format": "prettier --write \"{tests,src}/**/*.{js,mjs,tsx,ts}\"",
+    "static": "npx serve@latest out"
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
@@ -21,10 +22,14 @@
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
     "eslint": "^8.25.0",
     "eslint-config-next": "^13.4.3",
     "eslint-webpack-plugin": "^4.0.1",
     "file-loader": "^6.2.0",
-    "prettier": "^2.7.1"
+    "http-server": "^14.1.1",
+    "prettier": "^2.7.1",
+    "typescript": "^5.0.4"
   }
 }
