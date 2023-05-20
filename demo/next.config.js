@@ -27,6 +27,7 @@ module.exports = {
     })
     return config
   },
+  output: "export",
   basePath: '/react-wavify',
   assetPrefix: '/react-wavify/',
   trailingSlash: true
