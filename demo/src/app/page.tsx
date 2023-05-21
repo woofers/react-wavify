@@ -36,7 +36,7 @@ export const metadata = {
   metadataBase: process.env.NODE_ENV === "production" ? new URL('https://jaxs.onl/react-wavify') : new URL('http://localhost:3000/react-wavify'),
   twitter: {
     card: 'summary_large_image',
-    title: name,
+    title,
     description: description,
     creator: '@jaxsonvandoorn',
     images: {
