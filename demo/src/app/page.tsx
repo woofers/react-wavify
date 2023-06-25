@@ -14,10 +14,6 @@ export const metadata = {
   description,
   creator: name,
   publisher: name,
-  robots: {
-    index: false,
-    follow: true,
-  },
   viewport: {
     width: 'device-width',
     initialScale: 1,
