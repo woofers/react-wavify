@@ -37,6 +37,7 @@ import Wave from 'react-wavify'
 const App = () => (
   <Wave fill='#f79902'
         paused={false}
+        style={{ display: 'flex' }}
         options={{
           height: 20,
           amplitude: 20,
