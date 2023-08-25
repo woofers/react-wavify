@@ -1,6 +1,5 @@
 import React from 'react'
 import WaveBase from './wave'
-import PropTypes from './props'
 
 const defaults = {
   fill: '#fff',
@@ -16,12 +15,6 @@ const Wave = ({ options, ...rest }) =>
 
 if (__isDev__) {
   Wave.displayName = 'Wave'
-
-  Wave.propTypes = {
-    paused: PropTypes.bool,
-    fill: PropTypes.string,
-    options: PropTypes.object
-  }
 }
 
 
