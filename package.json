@@ -54,7 +54,5 @@
     "microbundle": "^0.15.1",
     "rimraf": "^5.0.1"
   },
-  "dependencies": {
-    "prop-types": "^15.8.1"
-  }
+  "dependencies": {}
 }
