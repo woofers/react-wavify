@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "1.8.3",
+  "version": "1.9.0",
   "description": "Animated wave component for React",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
