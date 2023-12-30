@@ -30,6 +30,5 @@ module.exports = {
   assetPrefix: '/react-wavify/',
   trailingSlash: true,
   experimental: {
-    appDir: true,
   }
 }

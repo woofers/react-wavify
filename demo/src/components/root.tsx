@@ -18,11 +18,6 @@ const BodyContainer = styled('div', {
   fontSize: '20px'
 })
 
-const BodyText = styled('div', {
-  color: '$darkBlue',
-  fontFamily: '$title'
-})
-
 const Text = styled('span', {
   fontFamily: '$title',
   fontWeight: 700,
@@ -52,11 +47,6 @@ const WaveWrapper = styled('div', {
     height: '400px'
   }
 })
-
-const margin = {
-  marginTop: '3.5em',
-  marginBottom: '1.6em'
-}
 
 const Center = styled('div', {
   display: 'flex',

@@ -1,5 +1,5 @@
 import Root from 'components/root'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 
 const name = 'Jaxson Van Doorn'
 const ogImage = '/meta-image.png'
@@ -9,16 +9,18 @@ const author = name
 const description = 'Animated wave component for React'
 const alt = 'Cover image for React Wavify'
 
+export const viewport = {
+  width: 'device-width',
+  viewportFit: 'cover',
+  initialScale: 1,
+  themeColor: '#fadc96'
+} satisfies Viewport
+
 export const metadata = {
   title,
   description,
   creator: name,
   publisher: name,
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    viewportFit: 'cover'
-  },
   icons: {
     icon: [{ url: '/react-wavify/favicon.ico' }],
     shortcut: ['/react-wavify/favicon.ico'],
@@ -28,7 +30,6 @@ export const metadata = {
     other: []
   },
   manifest: '/react-wavify/manifest.webmanifest',
-  themeColor: '#fadc96',
   metadataBase: process.env.NODE_ENV === "production" ? new URL('https://jaxs.onl/react-wavify') : new URL('http://localhost:3000/react-wavify'),
   twitter: {
     card: 'summary_large_image',

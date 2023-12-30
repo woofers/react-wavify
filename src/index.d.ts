@@ -7,7 +7,7 @@ type WaveOptions = {
   points?: number
 }
 
-type BaseProps = Omit<React.SVGProps<SVGPathElement>, 'ref'>
+type BaseProps = Omit<React.SVGProps<SVGPathElement>, 'ref' | 'height' | 'width' | 'points'>
 
 type WaveProps = BaseProps & WaveOptions & {
   paused?: boolean

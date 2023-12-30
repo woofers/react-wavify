@@ -1,7 +1,7 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "1.9.0",
+  "version": "1.10.0",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "next": "^13.4.3",
+    "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-wavify": "../."
@@ -25,11 +25,11 @@
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
     "eslint": "^8.25.0",
-    "eslint-config-next": "^13.4.3",
+    "eslint-config-next": "^14.0.4",
     "eslint-webpack-plugin": "^4.0.1",
     "file-loader": "^6.2.0",
     "http-server": "^14.1.1",
-    "prettier": "^2.7.1",
+    "prettier": "^3.1.1",
     "typescript": "^5.0.4"
   }
 }
