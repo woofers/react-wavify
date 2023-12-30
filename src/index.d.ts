@@ -1,14 +1,15 @@
-import React, { Props, Component, SVGProps } from 'react'
+import React from 'react'
 
-interface WaveOptions {
+type WaveOptions = {
   height?: number
   amplitude?: number
   speed?: number
   points?: number
-  [key: string]: number
 }
 
-interface WaveProps extends Props<WaveProps>, SVGProps<SVGPathElement> {
+type BaseProps = Omit<React.SVGProps<SVGPathElement>, 'ref'>
+
+type WaveProps = BaseProps & WaveOptions & {
   paused?: boolean
   fill?: string
   options?: WaveOptions
@@ -17,16 +18,6 @@ interface WaveProps extends Props<WaveProps>, SVGProps<SVGPathElement> {
   svgPathId?: string
 }
 
-interface WaveState {
-  path: string
-}
+declare const Wave: React.FC<WaveProps>
 
-interface Point {
-  x: number
-  y: number
-}
-
-declare class Wave extends Component<WaveProps, WaveState> {
-}
-
-export default Wave
+export = Wave
