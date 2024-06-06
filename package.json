@@ -1,6 +1,6 @@
 {
     "name": "react-wavify-root",
-    "version": "1.10.1",
+    "version": "1.11.0",
     "description": "Animated wave component for React",
     "scripts": {
       "package": "pnpm -C packages/react-wavify package",
