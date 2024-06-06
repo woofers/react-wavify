@@ -1,58 +1,29 @@
 {
-  "name": "react-wavify",
-  "version": "1.10.1",
-  "description": "Animated wave component for React",
-  "main": "lib/index.js",
-  "module": "lib/index.module.js",
-  "sideEffects": false,
-  "src": "src/index.js",
-  "types": "lib/index.d.ts",
-  "files": [
-    "lib",
-    "License.txt",
-    "package.json",
-    "README.md"
-  ],
-  "scripts": {
-    "start": "yarn watch",
-    "build:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.module.js -f es",
-    "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.js -f umd",
-    "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.module.dev.js -f es",
-    "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.dev.js -f umd",
-    "build:types": "cp src/index.d.ts lib/index.d.ts",
-    "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts",
-    "build": "yarn build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types",
-    "watch": "rollup -c --watch",
-    "test": "echo \"No tests \" && exit 0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/woofers/react-wavify.git"
-  },
-  "keywords": [
-    "react",
-    "reactjs",
-    "component",
-    "svg",
-    "animation",
-    "wave"
-  ],
-  "browserslist": [
-    "defaults",
-    "not IE 11"
-  ],
-  "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/woofers/react-wavify/issues"
-  },
-  "homepage": "https://github.com/woofers/react-wavify#readme",
-  "peerDependencies": {
-    "react": "^0.13.0 || ^0.14.0 || >=15"
-  },
-  "devDependencies": {
-    "microbundle": "^0.15.1",
-    "rimraf": "^5.0.7"
-  },
-  "dependencies": {}
-}
+    "name": "react-wavify-root",
+    "version": "1.10.1",
+    "description": "Animated wave component for React",
+    "scripts": {
+      "package": "pnpm -C packages/react-wavify package",
+      "build": "pnpm -C packages/react-wavify build",
+      "test": "pnpm -C packages/react-wavify test",
+      "clean": "pnpm -C packages/react-wavify clean && pnpm -C packages/website clean",
+      "dev": "pnpm -C packages/website dev",
+      "build-site": "pnpm -C packages/website build",
+      "format": "prettier --write \"packages/**/{src,tests}/**/*.js\""
+    },
+    "repository": "https://github.com/woofers/react-wavify",
+    "keywords": [
+      "react",
+      "reactjs",
+      "component",
+      "svg",
+      "animation",
+      "wave"
+    ],
+    "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/woofers/react-wavify/issues"
+    },
+    "homepage": "https://jaxs.onl/react-wavify/"
+  }

@@ -18,7 +18,7 @@
     "next": "15.0.0-rc.0",
     "react": "19.0.0-rc.0",
     "react-dom": "19.0.0-rc.0",
-    "react-wavify": "../."
+    "react-wavify": "workspace:*"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",

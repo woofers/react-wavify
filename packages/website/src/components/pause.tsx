@@ -4,6 +4,7 @@ import { styled } from 'stitches'
 import { PlayIcon, PauseIcon } from 'icons'
 
 const Button = styled('button', {
+  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
   fontSize: '75px',
   border: '0',
   color: '$primary',
