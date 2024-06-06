@@ -1,8 +1,10 @@
-const path = require('path')
 
 module.exports = {
   swcMinify: true,
   reactStrictMode: true,
+  experimental: {
+    reactCompiler: true,
+  },
   images: {
     loader: 'imgix',
     path: 'https://example.com/myaccount/',
@@ -28,7 +30,5 @@ module.exports = {
   output: "export",
   basePath: '/react-wavify',
   assetPrefix: '/react-wavify/',
-  trailingSlash: true,
-  experimental: {
-  }
+  trailingSlash: true
 }

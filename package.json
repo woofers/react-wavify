@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "microbundle": "^0.15.1",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.7"
   },
   "dependencies": {}
 }

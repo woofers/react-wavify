@@ -3,7 +3,7 @@ import StitchesRegistry from './registry'
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
-    <head/>
+    <head />
     <body>
       <div id="__next">
         <StitchesRegistry>
