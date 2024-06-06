@@ -37,8 +37,8 @@ jobs:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
     - name: Publish Demo
       uses: JamesIves/github-pages-deploy-action@v4.3.0
-      if: startsWith(github.ref, 'refs/tags/')
+      # if: startsWith(github.ref, 'refs/tags/')
       with:
         branch: gh-pages
-        folder: demo/out
+        folder: packages/website/out
         commit-message: Updates
