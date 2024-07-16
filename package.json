@@ -9,7 +9,7 @@
       "clean": "pnpm -C packages/react-wavify clean && pnpm -C packages/website clean",
       "dev": "pnpm -C packages/website dev",
       "build-site": "pnpm -C packages/website build",
-      "format": "prettier --write \"packages/**/{src,tests}/**/*.js\""
+      "format": "prettier --write \"packages/**/{src,tests}/**/*.{js,jsx,ts,tsx}\""
     },
     "repository": "https://github.com/woofers/react-wavify",
     "keywords": [

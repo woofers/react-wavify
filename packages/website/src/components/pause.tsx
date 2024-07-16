@@ -1,31 +1,15 @@
 'use client'
 
-import { styled } from 'stitches'
 import { PlayIcon, PauseIcon } from 'icons'
 import clsx from 'clsx'
 
-const Button = styled('button', {
-  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-  fontSize: '75px',
-  border: '0',
-  color: '$primary',
-  backgroundColor: 'transparent',
-  '&:hover': {
-    color: '$primaryHover'
-  },
-  '> svg': {
-    width: '0.875em'
-  }
-})
-
 type PauseProps = {
-  color?: string
   paused?: boolean
   onClick: () => void
   className?: string
 }
 
-const Pause: React.FC<PauseProps> = ({ color, paused, onClick, className, ...rest }) => {
+const Pause: React.FC<PauseProps> = ({ paused, onClick, className, ...rest }) => {
   const handleClick = () => {
     onClick()
   }
@@ -37,8 +21,7 @@ const Pause: React.FC<PauseProps> = ({ color, paused, onClick, className, ...res
   }
   const label = paused ? 'Play' : 'Pause'
   return (
-    <Button
-      css={{ color }}
+    <button
       onKeyPress={handleButton}
       onMouseUp={handleClick}
       title={label}
@@ -47,7 +30,7 @@ const Pause: React.FC<PauseProps> = ({ color, paused, onClick, className, ...res
       {...rest}
     >
       {paused ? <PlayIcon className="w-[14px]" /> : <PauseIcon className="w-[14px]" />}
-    </Button>
+    </button>
   )
 }
 

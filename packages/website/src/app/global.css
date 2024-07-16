@@ -20,14 +20,9 @@
   --color-blue: #5e9ef1;
   --color-darkBlue: #3268ce;
   --color-selection: #fff9cc;
-  --fonts-title: 'Quicksand', sans-serif;
 }
 
-@layer utilities {
-  .feature-list {
-    list-style-type: none;
-  }
-  .feature-list > li:before {
-    content: "- ";
-  }
+::selection {
+  background: var(--color-selection);
 }
+
