@@ -15,7 +15,7 @@ const WaveSection: React.FC<Nothing> = () => {
   const togglePaused = () => setPause(!isPaused)
   return (
     <>
-      <PauseWrapper>
+      <PauseWrapper className="flex justify-center">
         <Pause onClick={togglePaused} paused={isPaused} />
       </PauseWrapper>
       <Wave

@@ -75,16 +75,16 @@ const Link = styled('a', {
 })
 
 const App: React.FC<Nothing> = () => (
-  <Fullscreen>
-    <WaveWrapper>
-      <Center>
-        <Link href="https://github.com/woofers/react-wavify">
-          <Text>react-wavify</Text>
+  <Fullscreen className="fixed top-0 bottom-0 left-0 right-0 opacity-100 bg-[var(--color-blue)]">
+    <WaveWrapper className="w-full absolute bg-[var(--color-secondary)] [z-index:-1] h-[300px] xs:h-[400px]">
+      <Center className="flex justify-center mt-[56px] mb-[25.6px] xs:mt-[88px] xs:mb-[40px]">
+        <Link href="https://github.com/woofers/react-wavify" className="no-underline text-[8px] text-[var(--color-primary)] hover:text-[var(--color-primaryHover)] xs:text-base xxs:text-xs">
+          <Text className="font-bold mt-0 mb-0 text-[88px] [font-family:var(--fonts-title)] [letter-spacing:-0.3px]">react-wavify</Text>
         </Link>
       </Center>
       <Wave />
-      <BodyWrapper>
-        <BodyContainer></BodyContainer>
+      <BodyWrapper className="relative">
+        <BodyContainer className="absolute w-full flex justify-center items-center text-xl top-[-80px]" />
       </BodyWrapper>
     </WaveWrapper>
   </Fullscreen>

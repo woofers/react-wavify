@@ -14,14 +14,13 @@
     "README.md"
   ],
   "scripts": {
-    "start": "yarn watch",
     "build:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.module.js -f es",
     "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.js -f umd",
     "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.module.dev.js -f es",
     "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.dev.js -f umd",
     "build:types": "cp src/index.d.ts lib/index.d.ts",
     "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts README.md",
-    "build": "yarn build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types && cp ../../README.md README.md",
+    "build": "pnpm build:dev:module && pnpm build:dev:umd && pnpm build:module && pnpm build:umd && pnpm build:types && cp ../../README.md README.md",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0",
     "package": "pnpm publish --no-git-checks --access public"
@@ -55,5 +54,8 @@
     "microbundle": "^0.15.1",
     "rimraf": "^5.0.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwindcss": "4.0.0-alpha.17"
+  }
 }

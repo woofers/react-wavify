@@ -1,5 +1,6 @@
 import Providers from './providers'
 import StitchesRegistry from './registry'
+import './globals.css'
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
