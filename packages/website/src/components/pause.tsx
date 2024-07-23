@@ -26,12 +26,13 @@ const Pause: React.FC<PauseProps> = ({ paused, onClick, className, ...rest }) =>
       onMouseUp={handleClick}
       title={label}
       aria-label={label}
-      className={clsx("text-[75px] border-0 text-[var(--color-primary)] bg-transparent [-webkit-tap-highlight-color:rgba(0,0,0,0)] hover:bg-[var(--color-primaryHover)]", className)}
+      className={clsx("text-[75px] border-0 text-[var(--color-primary)] bg-transparent [-webkit-tap-highlight-color:rgba(0,0,0,0)] hover:text-[var(--color-primaryHover)]", className)}
       {...rest}
     >
-      {paused ? <PlayIcon className="w-[14px]" /> : <PauseIcon className="w-[14px]" />}
+      {paused ? <PlayIcon className="w-[66px]" /> : <PauseIcon className="w-[66px]" />}
     </button>
   )
 }
 
 export default Pause
+

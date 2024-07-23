@@ -22,7 +22,7 @@ const Text: React.FC<React.ComponentProps<'span'>> = ({
 }) => (
   <span
     className={clsx(
-      'font-bold mt-0 mb-0 text-[88px] [font-family:var(--fonts-title)] [letter-spacing:-0.3px]',
+      'font-bold mt-0 mb-0 text-[44px] [font-family:var(--fonts-title)] tracking-[-3px] xs:text-[88px] xxs:text-[66px]',
       className
     )}
     {...rest}
@@ -32,7 +32,7 @@ const Text: React.FC<React.ComponentProps<'span'>> = ({
 const Link: React.FC<React.ComponentProps<'a'>> = ({ className, ...rest }) => (
   <a
     className={clsx(
-      'no-underline text-[8px] text-[var(--color-primary)] hover:text-[var(--color-primaryHover)] xs:text-base xxs:text-xs',
+      '[line-height:normal] no-underline text-[8px] text-[var(--color-primary)] hover:text-[var(--color-primaryHover)] xs:text-base xxs:text-xs',
       className
     )}
     {...rest}

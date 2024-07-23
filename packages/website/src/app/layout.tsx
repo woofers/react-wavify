@@ -1,7 +1,7 @@
 import './global.css'
-//import { Quicksand } from 'next/font/google'
+import { Quicksand } from 'next/font/google'
 
-/*
+
 const quicksand = Quicksand({
   subsets: ['latin'],
   weight: ['700'],
@@ -9,15 +9,13 @@ const quicksand = Quicksand({
   preload: true,
   display: 'swap'
 })
-  */
- //className={quicksand.variable}
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
     <head />
     <body>
       <div id="__next">
-        <div >{children}</div>
+        <div className={quicksand.variable}>{children}</div>
       </div>
     </body>
   </html>
