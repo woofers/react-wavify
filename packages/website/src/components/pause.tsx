@@ -1,29 +1,20 @@
 'use client'
 
-import { styled } from 'stitches'
 import { PlayIcon, PauseIcon } from 'icons'
-
-const Button = styled('button', {
-  WebkitTapHighlightColor: 'rgba(0, 0, 0, 0)',
-  fontSize: '75px',
-  border: '0',
-  color: '$primary',
-  backgroundColor: 'transparent',
-  '&:hover': {
-    color: '$primaryHover'
-  },
-  '> svg': {
-    width: '0.875em'
-  }
-})
+import clsx from 'clsx'
 
 type PauseProps = {
-  color?: string
   paused?: boolean
   onClick: () => void
+  className?: string
 }
 
-const Pause: React.FC<PauseProps> = ({ color, paused, onClick, ...rest }) => {
+const Pause: React.FC<PauseProps> = ({
+  paused,
+  onClick,
+  className,
+  ...rest
+}) => {
   const handleClick = () => {
     onClick()
   }
@@ -35,16 +26,23 @@ const Pause: React.FC<PauseProps> = ({ color, paused, onClick, ...rest }) => {
   }
   const label = paused ? 'Play' : 'Pause'
   return (
-    <Button
-      css={{ color }}
+    <button
       onKeyPress={handleButton}
       onMouseUp={handleClick}
       title={label}
       aria-label={label}
+      className={clsx(
+        'text-[75px] border-0 text-[var(--color-primary)] bg-transparent [-webkit-tap-highlight-color:rgba(0,0,0,0)] hover:text-[var(--color-primaryHover)]',
+        className
+      )}
       {...rest}
     >
-      {paused ? <PlayIcon /> : <PauseIcon />}
-    </Button>
+      {paused ? (
+        <PlayIcon className="w-[66px]" />
+      ) : (
+        <PauseIcon className="w-[66px]" />
+      )}
+    </button>
   )
 }
 

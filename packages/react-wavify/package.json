@@ -1,6 +1,6 @@
 {
   "name": "react-wavify",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "description": "Animated wave component for React",
   "main": "lib/index.js",
   "module": "lib/index.module.js",
@@ -14,14 +14,14 @@
     "README.md"
   ],
   "scripts": {
-    "start": "yarn watch",
+    "start": "pnpm watch",
     "build:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.module.js -f es",
     "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.js -f umd",
     "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.module.dev.js -f es",
     "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.dev.js -f umd",
     "build:types": "cp src/index.d.ts lib/index.d.ts",
-    "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts README.md",
-    "build": "yarn build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types && cp ../../README.md README.md",
+    "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts",
+    "build": "pnpm build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0",
     "package": "pnpm publish --no-git-checks --access public"

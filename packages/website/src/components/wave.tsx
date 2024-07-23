@@ -1,26 +1,20 @@
 'use client'
 
 import React, { useState } from 'react'
-import { styled } from 'stitches'
 import Wave from 'react-wavify'
 import Pause from 'components/pause'
-
-const PauseWrapper = styled('div', {
-  display: 'flex',
-  justifyContent: 'center'
-})
 
 const WaveSection: React.FC<Nothing> = () => {
   const [isPaused, setPause] = useState(false)
   const togglePaused = () => setPause(!isPaused)
   return (
     <>
-      <PauseWrapper>
+      <div className="flex justify-center mb-4">
         <Pause onClick={togglePaused} paused={isPaused} />
-      </PauseWrapper>
+      </div>
       <Wave
         paused={isPaused}
-        fill="var(--colors-blue)"
+        fill="var(--color-blue)"
         options={{
           height: 20,
           amplitude: 20,

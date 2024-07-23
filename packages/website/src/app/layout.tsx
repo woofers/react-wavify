@@ -1,14 +1,20 @@
-import Providers from './providers'
-import StitchesRegistry from './registry'
+import './global.css'
+import { Quicksand } from 'next/font/google'
+
+const quicksand = Quicksand({
+  subsets: ['latin'],
+  weight: ['700'],
+  variable: '--fonts-title',
+  preload: true,
+  display: 'swap'
+})
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <html lang="en">
     <head />
     <body>
       <div id="__next">
-        <StitchesRegistry>
-          <Providers>{children}</Providers>
-        </StitchesRegistry>
+        <div className={quicksand.variable}>{children}</div>
       </div>
     </body>
   </html>

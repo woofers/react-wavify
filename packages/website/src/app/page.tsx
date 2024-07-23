@@ -25,12 +25,19 @@ export const metadata = {
     icon: [{ url: '/react-wavify/favicon.ico' }],
     shortcut: ['/react-wavify/favicon.ico'],
     apple: [
-        ...([32, 48, 72, 144, 192, 256, 384, 512].map(size => ({ url: `/react-wavify/icons/mask-${size}x${size}.png`, sizes: `${size}x${size}`, type: 'image/png' })))
+      ...[32, 48, 72, 144, 192, 256, 384, 512].map(size => ({
+        url: `/react-wavify/icons/mask-${size}x${size}.png`,
+        sizes: `${size}x${size}`,
+        type: 'image/png'
+      }))
     ],
     other: []
   },
   manifest: '/react-wavify/manifest.webmanifest',
-  metadataBase: process.env.NODE_ENV === "production" ? new URL('https://jaxs.onl/react-wavify') : new URL('http://localhost:3000/react-wavify'),
+  metadataBase:
+    process.env.NODE_ENV === 'production'
+      ? new URL('https://jaxs.onl/react-wavify')
+      : new URL('http://localhost:3000/react-wavify'),
   twitter: {
     card: 'summary_large_image',
     title,
@@ -45,14 +52,16 @@ export const metadata = {
     title: name,
     description,
     //type: 'article',
-    images: [{
-      type: 'image/png',
-      url: ogImage,
-      alt,
-      width: 1200,
-      height: 630,
-    }]
-  },
+    images: [
+      {
+        type: 'image/png',
+        url: ogImage,
+        alt,
+        width: 1200,
+        height: 630
+      }
+    ]
+  }
 } satisfies Metadata
 
 const Page: React.FC<Nothing> = () => {

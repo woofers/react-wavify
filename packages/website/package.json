@@ -1,7 +1,7 @@
 {
   "name": "react-wavify-demo",
   "homepage": "http://woofers.github.io/react-wavify",
-  "version": "1.11.0",
+  "version": "1.11.1",
   "author": "Jaxson Van Doorn <jaxson.vandoorn@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -11,19 +11,24 @@
     "lint": "next lint",
     "test": "echo 'No tests'",
     "format": "prettier --write \"{tests,src}/**/*.{js,mjs,tsx,ts}\"",
-    "static": "npx serve@latest out"
+    "static": "npx serve@latest out",
+    "typecheck": "tsc --p ."
   },
   "dependencies": {
-    "@stitches/react": "^1.2.8",
+    "clsx": "^2.1.1",
     "next": "15.0.0-rc.0",
+    "postcss": "^8.4.39",
     "react": "19.0.0-rc.0",
     "react-dom": "19.0.0-rc.0",
-    "react-wavify": "workspace:*"
+    "react-wavify": "workspace:*",
+    "tailwindcss": "4.0.0-alpha.14"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "@tailwindcss/cli": "4.0.0-alpha.14",
+    "@tailwindcss/postcss": "4.0.0-alpha.14",
     "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
     "eslint": "^8.25.0",
     "eslint-config-next": "^14.2.3",

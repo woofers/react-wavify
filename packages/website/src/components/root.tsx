@@ -1,93 +1,57 @@
-'use client'
-
 import React from 'react'
-import { styled } from 'stitches'
 import Wave from 'components/wave'
+import clsx from 'clsx'
 
-const BodyWrapper = styled('div', {
-  position: 'relative'
-})
+const Center: React.FC<React.ComponentProps<'div'>> = ({
+  className,
+  ...rest
+}) => (
+  <div
+    className={clsx(
+      'flex justify-center mt-[56px] mb-[25.6px] xs:mt-[88px] xs:mb-[40px]',
+      className
+    )}
+    {...rest}
+  />
+)
 
-const BodyContainer = styled('div', {
-  top: '-80px',
-  position: 'absolute',
-  width: '100%',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  fontSize: '20px'
-})
+const Text: React.FC<React.ComponentProps<'span'>> = ({
+  className,
+  ...rest
+}) => (
+  <span
+    className={clsx(
+      'font-bold mt-0 mb-0 text-[44px] [font-family:var(--fonts-title)] tracking-[-3px] xs:text-[88px] xxs:text-[66px]',
+      className
+    )}
+    {...rest}
+  />
+)
 
-const Text = styled('span', {
-  fontFamily: '$title',
-  fontWeight: 700,
-  fontSize: '5.5em',
-  marginTop: 0,
-  marginBottom: 0,
-  letterSpacing: '-3px'
-})
-
-const Fullscreen = styled('div', {
-  background: '$blue',
-  position: 'fixed',
-  top: 0,
-  bottom: 0,
-  left: 0,
-  right: 0,
-  opacity: 1
-})
-
-const WaveWrapper = styled('div', {
-  background: '$secondary',
-  width: '100%',
-  position: 'absolute',
-  zIndex: -1,
-  height: '300px',
-  '@sm': {
-    height: '400px'
-  }
-})
-
-const Center = styled('div', {
-  display: 'flex',
-  justifyContent: 'center',
-  marginTop: '3.5em',
-  marginBottom: '1.6em',
-  '@sm': {
-    marginTop: '5.5em',
-    marginBottom: '2.5em'
-  }
-})
-
-const Link = styled('a', {
-  textDecoration: 'none',
-  fontSize: '0.5em',
-  color: '$primary',
-  '&:hover': {
-    color: '$primaryHover'
-  },
-  '@xsm': {
-    fontSize: '0.75em'
-  },
-  '@sm': {
-    fontSize: '16px'
-  }
-})
+const Link: React.FC<React.ComponentProps<'a'>> = ({ className, ...rest }) => (
+  <a
+    className={clsx(
+      '[line-height:normal] no-underline text-[8px] text-[var(--color-primary)] hover:text-[var(--color-primaryHover)] xs:text-base xxs:text-xs',
+      className
+    )}
+    {...rest}
+  />
+)
 
 const App: React.FC<Nothing> = () => (
-  <Fullscreen>
-    <WaveWrapper>
+  <div className="fixed top-0 bottom-0 left-0 right-0 opacity-100 bg-[var(--color-blue)]">
+    <div className="w-full absolute bg-[var(--color-secondary)] [z-index:-1] h-[300px] xs:h-[400px]">
       <Center>
         <Link href="https://github.com/woofers/react-wavify">
           <Text>react-wavify</Text>
         </Link>
       </Center>
       <Wave />
-      <BodyWrapper>
-        <BodyContainer></BodyContainer>
-      </BodyWrapper>
-    </WaveWrapper>
-  </Fullscreen>
+      <div className="relative">
+        <div className="absolute w-full flex justify-center items-center text-xl top-[-80px]" />
+      </div>
+    </div>
+  </div>
 )
 
 export default App
