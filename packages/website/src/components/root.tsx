@@ -2,7 +2,6 @@ import React from 'react'
 import Wave from 'components/wave'
 import clsx from 'clsx'
 
-
 const Center: React.FC<React.ComponentProps<'div'>> = ({
   className,
   ...rest
