@@ -92,7 +92,7 @@ class Wave extends Component {
 
   render () {
     if (__isDev__) {
-      if (!reportedError && typeof navigator !== 'undefined' && navigator.platform === 'ReactNative') {
+      if (!reportedError && typeof navigator !== 'undefined' && navigator.product === 'ReactNative') {
         reportedError = true
         throw new Error('react-wavify is not supported in react-native.')
       }
