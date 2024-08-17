@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+let reportedError
+
 class Wave extends Component {
   constructor (props) {
     super(props)
@@ -89,6 +91,12 @@ class Wave extends Component {
   }
 
   render () {
+    if (__isDev__) {
+      if (!reportedError && typeof navigator !== 'undefined' && navigator.platform === 'ReactNative') {
+        reportedError = true
+        throw new Error('react-wavify is not supported in react-native.')
+      }
+    }
     const {
       style,
       className,
