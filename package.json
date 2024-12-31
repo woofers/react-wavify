@@ -9,7 +9,7 @@
       "clean": "pnpm -C packages/react-wavify clean && pnpm -C packages/website clean",
       "dev": "pnpm -C packages/website dev",
       "build-site": "pnpm -C packages/website build",
-      "format": "prettier --write \"packages/**/{src,tests}/**/*.{js,jsx,ts,tsx}\""
+      "format": "biome format --write"
     },
     "repository": "https://github.com/woofers/react-wavify",
     "keywords": [
@@ -25,5 +25,8 @@
     "bugs": {
       "url": "https://github.com/woofers/react-wavify/issues"
     },
-    "homepage": "https://jaxs.onl/react-wavify/"
+    "homepage": "https://jaxs.onl/react-wavify/",
+    "devDependencies": {
+      "@biomejs/biome": "^1.8.3"
+    }
   }

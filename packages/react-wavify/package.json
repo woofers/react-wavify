@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "module": "lib/index.module.js",
   "sideEffects": false,
-  "src": "src/index.js",
+  "src": "src/index.tsx",
   "types": "lib/index.d.ts",
   "files": [
     "lib",
@@ -15,15 +15,17 @@
   ],
   "scripts": {
     "start": "pnpm watch",
-    "build:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.module.js -f es",
-    "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.js -o lib/react-wavify.js -f umd",
-    "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.module.dev.js -f es",
-    "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.js -o lib/react-wavify.dev.js -f umd",
+    "build:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.tsx -o lib/react-wavify.module.js -f es",
+    "build:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=false -i src/index.tsx -o lib/react-wavify.js -f umd",
+    "build:dev:module": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.tsx -o lib/react-wavify.module.dev.js -f es",
+    "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.tsx -o lib/react-wavify.dev.js -f umd",
     "build:types": "cp src/index.d.ts lib/index.d.ts",
     "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts",
     "build": "pnpm build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0",
+    "lint": "biome lint",
+    "format": "biome format --write",
     "package": "pnpm publish --no-git-checks --access public"
   },
   "repository": {
@@ -52,8 +54,10 @@
     "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
     "microbundle": "^0.15.1",
-    "rimraf": "^5.0.7"
-  },
-  "dependencies": {}
+    "rimraf": "^6.0.1",
+    "typescript": "^5.7.2"
+  }
 }

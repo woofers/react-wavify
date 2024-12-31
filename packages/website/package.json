@@ -7,35 +7,31 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "start": "pnpx serve@latest out",
+    "lint": "biome lint",
     "test": "echo 'No tests'",
-    "format": "prettier --write \"{tests,src}/**/*.{js,mjs,tsx,ts}\"",
+    "format": "biome format --write",
     "static": "npx serve@latest out",
     "typecheck": "tsc --p ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
-    "next": "15.0.0-rc.0",
-    "postcss": "^8.4.39",
-    "react": "19.0.0-rc.0",
-    "react-dom": "19.0.0-rc.0",
+    "next": "15.1.3",
+    "postcss": "^8.4.49",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "react-wavify": "workspace:*",
     "tailwindcss": "4.0.0-alpha.14"
   },
   "devDependencies": {
     "@svgr/webpack": "^8.0.1",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
     "@tailwindcss/cli": "4.0.0-alpha.14",
     "@tailwindcss/postcss": "4.0.0-alpha.14",
-    "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
-    "eslint": "^8.25.0",
-    "eslint-config-next": "^14.2.3",
-    "eslint-webpack-plugin": "^4.0.1",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "babel-plugin-react-compiler": "19.0.0-beta-55955c9-20241229",
     "file-loader": "^6.2.0",
     "http-server": "^14.1.1",
-    "prettier": "^3.1.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.7.2"
   }
 }

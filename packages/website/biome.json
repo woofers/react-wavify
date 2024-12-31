@@ -1,0 +1,25 @@
+{
+  "linter": {
+    "rules": {
+      "recommended": false,
+      "a11y": {
+        "noAriaUnsupportedElements": "warn",
+        "noBlankTarget": "off",
+        "useAltText": "off",
+        "useAriaPropsForRole": "warn",
+        "useValidAriaProps": "warn",
+        "useValidAriaValues": "warn"
+      },
+      "correctness": {
+        "noChildrenProp": "error",
+        "useExhaustiveDependencies": "warn",
+        "useHookAtTopLevel": "error",
+        "useJsxKeyInIterable": "error"
+      },
+      "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
+      "suspicious": { "noCommentText": "error", "noDuplicateJsxProps": "error" }
+    }
+  },
+  "extends": ["../../biome.json"],
+  "overrides": [{ "include": ["**/*.ts?(x)"] }]
+}

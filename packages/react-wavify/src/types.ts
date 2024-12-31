@@ -1,5 +1,3 @@
-import React from 'react'
-
 type WaveOptions = {
   height?: number
   amplitude?: number
@@ -12,15 +10,12 @@ type BaseProps = Omit<
   'ref' | 'height' | 'width' | 'points'
 >
 
-type WaveProps = BaseProps &
+export type WaveProps = BaseProps &
   WaveOptions & {
     paused?: boolean
     fill?: string
     options?: WaveOptions
+    ref?: string | unknown
     svgId?: string
     svgPathId?: string
   }
-
-declare const Wave: React.FC<WaveProps>
-
-export = Wave
