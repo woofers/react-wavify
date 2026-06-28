@@ -1,0 +1,3 @@
+:HL["/react-wavify/_next/static/chunks/0a9xhcb9faq7h.css","style"]
+:HL["/react-wavify/_next/static/media/03ab014d3b478c8d-s.p.21uqza3yk_q9x.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"vGCuvjs13093N--GsBsjC"}
