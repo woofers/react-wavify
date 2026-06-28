@@ -1,2 +1,6 @@
 packages:
   - 'packages/*'
+allowBuilds:
+  '@biomejs/biome': true
+  '@parcel/watcher': true
+  sharp: true

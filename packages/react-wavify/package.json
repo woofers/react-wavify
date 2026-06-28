@@ -21,7 +21,7 @@
     "build:dev:umd": "microbundle --no-pkg-main --no-sourcemap --no-generateTypes --jsx React.createElement --define __isDev__=true -i src/index.tsx -o lib/react-wavify.dev.js -f umd",
     "build:types": "cp src/index.d.ts lib/index.d.ts",
     "clean": "rimraf lib/react-wavify.dev.js lib/react-wavify.js lib/react-wavify.module.dev.js lib/react-wavify.module.js lib/index.d.ts",
-    "build": "pnpm build:dev:module && yarn build:dev:umd && yarn build:module && yarn build:umd && yarn build:types",
+    "build": "pnpm build:dev:module && pnpm build:dev:umd && pnpm build:module && pnpm build:umd && pnpm build:types",
     "watch": "rollup -c --watch",
     "test": "echo \"No tests \" && exit 0",
     "lint": "biome lint",
@@ -54,10 +54,11 @@
     "react": "^0.13.0 || ^0.14.0 || >=15"
   },
   "devDependencies": {
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@babel/plugin-transform-typescript": "^7.29.7",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
     "microbundle": "^0.15.1",
-    "rimraf": "^6.0.1",
-    "typescript": "^5.7.2"
+    "rimraf": "^6.1.3",
+    "typescript": "^5.9.3"
   }
 }

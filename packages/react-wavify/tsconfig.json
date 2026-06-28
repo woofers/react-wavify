@@ -5,6 +5,7 @@
     "target": "ESNext",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
+    "rootDir": "./src",
     "outDir": "dist",
     "experimentalDecorators": true,
     "jsx": "react",
@@ -16,8 +17,7 @@
     "noUnusedLocals": false,
     "strict": true,
     "strictPropertyInitialization": false,
-    "noImplicitAny": false,
-    "baseUrl": "./src"
+    "noImplicitAny": false
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules", "lib"]

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.5.1/schema.json",
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
@@ -9,8 +9,8 @@
     "lineWidth": 80,
     "attributePosition": "auto"
   },
-  "organizeImports": { "enabled": true },
-  "linter": { "enabled": true, "rules": { "recommended": true } },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
+  "linter": { "enabled": true, "rules": { "preset": "recommended" } },
   "javascript": {
     "formatter": {
       "jsxQuoteStyle": "double",
@@ -25,6 +25,12 @@
     }
   },
   "files": {
-    "ignore": ["package.json", "pnpm-lock.yml", "dist/*", "app/global.css"]
+    "includes": [
+      "**",
+      "!**/package.json",
+      "!**/pnpm-lock.yaml",
+      "!**/dist/**/*",
+      "!**/app/global.css"
+    ]
   }
 }

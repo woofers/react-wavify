@@ -4,12 +4,11 @@ import type { WaveProps } from './types'
 let reportedError: boolean
 
 type Point = {
-  x: number;
-  y: number;
+  x: number
+  y: number
 }
 
 class Wave extends Component<WaveProps, { path: string }> {
-
   private _container: React.RefObject<HTMLDivElement | null> = React.createRef()
   private _lastUpdate: Date | number = 0
   private _elapsed: number = 0
@@ -27,7 +26,10 @@ class Wave extends Component<WaveProps, { path: string }> {
     for (let i = 0; i <= Math.max(this.props.points!, 1); i++) {
       const scale = 100
       const x = (i / this.props.points!) * this._width()
-      const seed = (this._step + (i + (i % this.props.points!))) * this.props.speed! * scale
+      const seed =
+        (this._step + (i + (i % this.props.points!))) *
+        this.props.speed! *
+        scale
       const height = Math.sin(seed / scale) * this.props.amplitude!
       const y = Math.sin(seed / scale) * height + this.props.height!
       points.push({ x, y })
@@ -41,7 +43,8 @@ class Wave extends Component<WaveProps, { path: string }> {
       x: (points[1].x - points[0].x) / 2,
       y: points[1].y - points[0].y + points[0].y + (points[1].y - points[0].y)
     }
-    const cubic = (a: Point, b: Point) => ` C ${a.x} ${a.y} ${a.x} ${a.y} ${b.x} ${b.y}`
+    const cubic = (a: Point, b: Point) =>
+      ` C ${a.x} ${a.y} ${a.x} ${a.y} ${b.x} ${b.y}`
     svg += cubic(initial, points[1])
     let point = initial
     for (let i = 1; i < points.length - 1; i++) {
@@ -68,7 +71,8 @@ class Wave extends Component<WaveProps, { path: string }> {
   _draw() {
     if (!this.props.paused) {
       const now = new Date()
-      this._elapsed += (now as unknown as number) - (this._lastUpdate as unknown as number)
+      this._elapsed +=
+        (now as unknown as number) - (this._lastUpdate as unknown as number)
       this._lastUpdate = now
     }
     const scale = 1000

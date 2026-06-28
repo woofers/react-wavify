@@ -1,10 +1,10 @@
 {
+  "root": false,
   "linter": {
     "rules": {
-      "recommended": false,
+      "preset": "none",
       "a11y": {
         "noAriaUnsupportedElements": "warn",
-        "noBlankTarget": "off",
         "useAltText": "off",
         "useAriaPropsForRole": "warn",
         "useValidAriaProps": "warn",
@@ -16,10 +16,12 @@
         "useHookAtTopLevel": "error",
         "useJsxKeyInIterable": "error"
       },
-      "security": { "noDangerouslySetInnerHtmlWithChildren": "error" },
+      "security": {
+        "noDangerouslySetInnerHtmlWithChildren": "error",
+        "noBlankTarget": "off"
+      },
       "suspicious": { "noCommentText": "error", "noDuplicateJsxProps": "error" }
     }
   },
-  "extends": ["../../biome.json"],
-  "overrides": [{ "include": ["**/*.ts?(x)"] }]
+  "extends": ["../../biome.json"]
 }
