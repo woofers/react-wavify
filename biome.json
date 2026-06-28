@@ -3,6 +3,18 @@
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
+    "includes": [
+      "**",
+      "!**/package.json",
+      "!**/pnpm-lock.yaml",
+      "!**/next-env.d.ts",
+      "!**/.next/**",
+      "!**/out/**",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/lib/**",
+      "!**/app/global.css"
+    ],
     "indentStyle": "space",
     "indentWidth": 2,
     "lineEnding": "lf",
@@ -29,7 +41,12 @@
       "**",
       "!**/package.json",
       "!**/pnpm-lock.yaml",
-      "!**/dist/**/*",
+      "!**/next-env.d.ts",
+      "!**/.next/**",
+      "!**/out/**",
+      "!**/dist/**",
+      "!**/build/**",
+      "!**/lib/**",
       "!**/app/global.css"
     ]
   }
